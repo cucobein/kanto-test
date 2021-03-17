@@ -12,13 +12,37 @@
 		D9207FA1EC114B748BCB86E2 /* Pods_kanto_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836FCE47363D2A47431684B8 /* Pods_kanto_testTests.framework */; };
 		FD7BA56F26016F7C007A509D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BA56E26016F7C007A509D /* AppDelegate.swift */; };
 		FD7BA57126016F7C007A509D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BA57026016F7C007A509D /* SceneDelegate.swift */; };
-		FD7BA57326016F7C007A509D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BA57226016F7C007A509D /* ViewController.swift */; };
+		FD7BA57326016F7C007A509D /* KantoProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BA57226016F7C007A509D /* KantoProfileViewController.swift */; };
 		FD7BA57626016F7C007A509D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7BA57426016F7C007A509D /* Main.storyboard */; };
 		FD7BA57826016F7E007A509D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD7BA57726016F7E007A509D /* Assets.xcassets */; };
 		FD7BA57B26016F7E007A509D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7BA57926016F7E007A509D /* LaunchScreen.storyboard */; };
 		FD7BA5A626017E60007A509D /* Bond in Frameworks */ = {isa = PBXBuildFile; productRef = FD7BA5A526017E60007A509D /* Bond */; };
 		FD7BA5AC26017ED6007A509D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = FD7BA5AB26017ED6007A509D /* Realm */; };
 		FD7BA5AE26017ED6007A509D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FD7BA5AD26017ED6007A509D /* RealmSwift */; };
+		FDEFF7E12602333C00047C0C /* KantoEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF7E02602333C00047C0C /* KantoEditProfileViewController.swift */; };
+		FDEFF7E6260233F500047C0C /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF7E5260233F500047C0C /* ApplicationCoordinator.swift */; };
+		FDEFF7EB2602350200047C0C /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF7EA2602350200047C0C /* ApiService.swift */; };
+		FDEFF7F1260235E000047C0C /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF7F0260235E000047C0C /* PersistenceController.swift */; };
+		FDEFF7F62602360B00047C0C /* KeyValueStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF7F52602360B00047C0C /* KeyValueStorage.swift */; };
+		FDEFF7FB260237B600047C0C /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF7FA260237B600047C0C /* UserProfile.swift */; };
+		FDEFF80926023A7000047C0C /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF80826023A7000047C0C /* KeychainHelper.swift */; };
+		FDEFF80F26023ADE00047C0C /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF80E26023ADE00047C0C /* Context.swift */; };
+		FDEFF81926023BA500047C0C /* ApiService+CDN.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF81826023BA500047C0C /* ApiService+CDN.swift */; };
+		FDEFF82226023BD800047C0C /* ImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF82126023BD800047C0C /* ImageResource.swift */; };
+		FDEFF82726023BFF00047C0C /* ApiResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF82626023BFF00047C0C /* ApiResource.swift */; };
+		FDEFF82D26023C3700047C0C /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF82C26023C3700047C0C /* NetworkRequest.swift */; };
+		FDEFF83326023CB000047C0C /* Error+Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF83226023CB000047C0C /* Error+Code.swift */; };
+		FDEFF83B26023CE600047C0C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF83A26023CE600047C0C /* Request.swift */; };
+		FDEFF84826023E7A00047C0C /* UserProfileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF84726023E7A00047C0C /* UserProfileProvider.swift */; };
+		FDEFF84D2602403900047C0C /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF84C2602403900047C0C /* ApiRequest.swift */; };
+		FDEFF8522602415100047C0C /* String+NonDigits.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF8512602415100047C0C /* String+NonDigits.swift */; };
+		FDEFF857260241A900047C0C /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF856260241A900047C0C /* Data+Helpers.swift */; };
+		FDEFF8732602814F00047C0C /* KantoLaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF8722602814F00047C0C /* KantoLaunchScreenViewController.swift */; };
+		FDEFF879260281B400047C0C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = FDEFF878260281B400047C0C /* Lottie */; };
+		FDEFF886260282AA00047C0C /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF885260282AA00047C0C /* StoryboardInstantiable.swift */; };
+		FDEFF88C260282DB00047C0C /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF88B260282DB00047C0C /* Storyboard.swift */; };
+		FDEFF8942602B4BE00047C0C /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF8932602B4BE00047C0C /* UIView+Autolayout.swift */; };
+		FDEFF8992602BC8400047C0C /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF8982602BC8400047C0C /* AnimationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,13 +75,36 @@
 		FD7BA56B26016F7C007A509D /* kanto-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kanto-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD7BA56E26016F7C007A509D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD7BA57026016F7C007A509D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FD7BA57226016F7C007A509D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FD7BA57226016F7C007A509D /* KantoProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantoProfileViewController.swift; sourceTree = "<group>"; };
 		FD7BA57526016F7C007A509D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD7BA57726016F7E007A509D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD7BA57A26016F7E007A509D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD7BA57C26016F7E007A509D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD7BA58126016F7E007A509D /* kanto-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kanto-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD7BA58C26016F7E007A509D /* kanto-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kanto-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDEFF7E02602333C00047C0C /* KantoEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantoEditProfileViewController.swift; sourceTree = "<group>"; };
+		FDEFF7E5260233F500047C0C /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		FDEFF7EA2602350200047C0C /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		FDEFF7F0260235E000047C0C /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		FDEFF7F52602360B00047C0C /* KeyValueStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorage.swift; sourceTree = "<group>"; };
+		FDEFF7FA260237B600047C0C /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		FDEFF80826023A7000047C0C /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		FDEFF80E26023ADE00047C0C /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		FDEFF81826023BA500047C0C /* ApiService+CDN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiService+CDN.swift"; sourceTree = "<group>"; };
+		FDEFF82126023BD800047C0C /* ImageResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResource.swift; sourceTree = "<group>"; };
+		FDEFF82626023BFF00047C0C /* ApiResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResource.swift; sourceTree = "<group>"; };
+		FDEFF82C26023C3700047C0C /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		FDEFF83226023CB000047C0C /* Error+Code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Code.swift"; sourceTree = "<group>"; };
+		FDEFF83A26023CE600047C0C /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		FDEFF84726023E7A00047C0C /* UserProfileProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileProvider.swift; sourceTree = "<group>"; };
+		FDEFF84C2602403900047C0C /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		FDEFF8512602415100047C0C /* String+NonDigits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+NonDigits.swift"; sourceTree = "<group>"; };
+		FDEFF856260241A900047C0C /* Data+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Helpers.swift"; sourceTree = "<group>"; };
+		FDEFF8722602814F00047C0C /* KantoLaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantoLaunchScreenViewController.swift; sourceTree = "<group>"; };
+		FDEFF885260282AA00047C0C /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
+		FDEFF88B260282DB00047C0C /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		FDEFF8932602B4BE00047C0C /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
+		FDEFF8982602BC8400047C0C /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation\U0010View.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDEFF879260281B400047C0C /* Lottie in Frameworks */,
 				FD7BA5AE26017ED6007A509D /* RealmSwift in Frameworks */,
 				FD7BA5AC26017ED6007A509D /* Realm in Frameworks */,
 				FD7BA5A626017E60007A509D /* Bond in Frameworks */,
@@ -137,15 +185,142 @@
 		FD7BA56D26016F7C007A509D /* kanto-test */ = {
 			isa = PBXGroup;
 			children = (
-				FD7BA56E26016F7C007A509D /* AppDelegate.swift */,
-				FD7BA57026016F7C007A509D /* SceneDelegate.swift */,
-				FD7BA57226016F7C007A509D /* ViewController.swift */,
+				FDEFF88A260282CF00047C0C /* Common */,
+				FDEFF80D26023AD200047C0C /* Context */,
+				FDEFF7EF2602359900047C0C /* Persistence */,
+				FDEFF7D326022D3700047C0C /* API */,
+				FDEFF7D426022D5400047C0C /* Application */,
+				FDEFF7D82602327B00047C0C /* Kanto */,
+				FDEFF7FF2602391D00047C0C /* Utils */,
 				FD7BA57426016F7C007A509D /* Main.storyboard */,
 				FD7BA57726016F7E007A509D /* Assets.xcassets */,
 				FD7BA57926016F7E007A509D /* LaunchScreen.storyboard */,
 				FD7BA57C26016F7E007A509D /* Info.plist */,
 			);
 			path = "kanto-test";
+			sourceTree = "<group>";
+		};
+		FDEFF7D326022D3700047C0C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FDEFF82B26023C2D00047C0C /* Base */,
+				FDEFF81D26023BC300047C0C /* Resources */,
+				FDEFF7EA2602350200047C0C /* ApiService.swift */,
+				FDEFF81826023BA500047C0C /* ApiService+CDN.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FDEFF7D426022D5400047C0C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FD7BA56E26016F7C007A509D /* AppDelegate.swift */,
+				FD7BA57026016F7C007A509D /* SceneDelegate.swift */,
+				FDEFF7E5260233F500047C0C /* ApplicationCoordinator.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FDEFF7D82602327B00047C0C /* Kanto */ = {
+			isa = PBXGroup;
+			children = (
+				FD7BA57226016F7C007A509D /* KantoProfileViewController.swift */,
+				FDEFF7E02602333C00047C0C /* KantoEditProfileViewController.swift */,
+				FDEFF8722602814F00047C0C /* KantoLaunchScreenViewController.swift */,
+			);
+			path = Kanto;
+			sourceTree = "<group>";
+		};
+		FDEFF7EF2602359900047C0C /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				FDEFF8A02602BE8C00047C0C /* Model */,
+				FDEFF7F0260235E000047C0C /* PersistenceController.swift */,
+				FDEFF7F52602360B00047C0C /* KeyValueStorage.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		FDEFF7FF2602391D00047C0C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FDEFF8842602829F00047C0C /* Protocols */,
+				FDEFF83126023C9A00047C0C /* Extensions */,
+				FDEFF8832602829300047C0C /* Helpers */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FDEFF80D26023AD200047C0C /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				FDEFF80E26023ADE00047C0C /* Context.swift */,
+			);
+			path = Context;
+			sourceTree = "<group>";
+		};
+		FDEFF81D26023BC300047C0C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FDEFF82126023BD800047C0C /* ImageResource.swift */,
+				FDEFF82626023BFF00047C0C /* ApiResource.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FDEFF82B26023C2D00047C0C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FDEFF82C26023C3700047C0C /* NetworkRequest.swift */,
+				FDEFF83A26023CE600047C0C /* Request.swift */,
+				FDEFF84C2602403900047C0C /* ApiRequest.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FDEFF83126023C9A00047C0C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FDEFF8982602BC8400047C0C /* AnimationView.swift */,
+				FDEFF83226023CB000047C0C /* Error+Code.swift */,
+				FDEFF8512602415100047C0C /* String+NonDigits.swift */,
+				FDEFF856260241A900047C0C /* Data+Helpers.swift */,
+				FDEFF8932602B4BE00047C0C /* UIView+Autolayout.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FDEFF8832602829300047C0C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FDEFF80826023A7000047C0C /* KeychainHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FDEFF8842602829F00047C0C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FDEFF885260282AA00047C0C /* StoryboardInstantiable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FDEFF88A260282CF00047C0C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FDEFF88B260282DB00047C0C /* Storyboard.swift */,
+				FDEFF84726023E7A00047C0C /* UserProfileProvider.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FDEFF8A02602BE8C00047C0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FDEFF7FA260237B600047C0C /* UserProfile.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +346,7 @@
 				FD7BA5A526017E60007A509D /* Bond */,
 				FD7BA5AB26017ED6007A509D /* Realm */,
 				FD7BA5AD26017ED6007A509D /* RealmSwift */,
+				FDEFF878260281B400047C0C /* Lottie */,
 			);
 			productName = "kanto-test";
 			productReference = FD7BA56B26016F7C007A509D /* kanto-test.app */;
@@ -249,6 +425,7 @@
 			packageReferences = (
 				FD7BA5A426017E60007A509D /* XCRemoteSwiftPackageReference "Bond" */,
 				FD7BA5AA26017ED6007A509D /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				FDEFF877260281B400047C0C /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = FD7BA56C26016F7C007A509D /* Products */;
 			projectDirPath = "";
@@ -414,9 +591,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD7BA57326016F7C007A509D /* ViewController.swift in Sources */,
+				FDEFF7E6260233F500047C0C /* ApplicationCoordinator.swift in Sources */,
+				FDEFF81926023BA500047C0C /* ApiService+CDN.swift in Sources */,
+				FDEFF82D26023C3700047C0C /* NetworkRequest.swift in Sources */,
+				FDEFF84826023E7A00047C0C /* UserProfileProvider.swift in Sources */,
+				FDEFF88C260282DB00047C0C /* Storyboard.swift in Sources */,
+				FDEFF7F1260235E000047C0C /* PersistenceController.swift in Sources */,
+				FDEFF7E12602333C00047C0C /* KantoEditProfileViewController.swift in Sources */,
+				FDEFF8942602B4BE00047C0C /* UIView+Autolayout.swift in Sources */,
+				FDEFF80926023A7000047C0C /* KeychainHelper.swift in Sources */,
+				FDEFF83B26023CE600047C0C /* Request.swift in Sources */,
+				FDEFF8992602BC8400047C0C /* AnimationView.swift in Sources */,
+				FDEFF857260241A900047C0C /* Data+Helpers.swift in Sources */,
+				FDEFF886260282AA00047C0C /* StoryboardInstantiable.swift in Sources */,
+				FDEFF80F26023ADE00047C0C /* Context.swift in Sources */,
+				FDEFF82226023BD800047C0C /* ImageResource.swift in Sources */,
+				FDEFF82726023BFF00047C0C /* ApiResource.swift in Sources */,
+				FDEFF7F62602360B00047C0C /* KeyValueStorage.swift in Sources */,
+				FDEFF8732602814F00047C0C /* KantoLaunchScreenViewController.swift in Sources */,
+				FDEFF7EB2602350200047C0C /* ApiService.swift in Sources */,
+				FD7BA57326016F7C007A509D /* KantoProfileViewController.swift in Sources */,
+				FDEFF8522602415100047C0C /* String+NonDigits.swift in Sources */,
 				FD7BA56F26016F7C007A509D /* AppDelegate.swift in Sources */,
 				FD7BA57126016F7C007A509D /* SceneDelegate.swift in Sources */,
+				FDEFF83326023CB000047C0C /* Error+Code.swift in Sources */,
+				FDEFF84D2602403900047C0C /* ApiRequest.swift in Sources */,
+				FDEFF7FB260237B600047C0C /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,6 +965,14 @@
 				minimumVersion = 10.7.2;
 			};
 		};
+		FDEFF877260281B400047C0C /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -782,6 +990,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FD7BA5AA26017ED6007A509D /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
+		};
+		FDEFF878260281B400047C0C /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDEFF877260281B400047C0C /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,32 +1,92 @@
-disabled_rules:
-- trailing_whitespace
-opt_in_rules:
-- empty_count
-- empty_string
-excluded:
-- Carthage
-- Pods
-- SwiftLint/Common/3rdPartyLib
-line_length:
-    warning: 150
-    error: 200
-    ignores_function_declarations: true
-    ignores_comments: true
-    ignores_urls: true
-function_body_length:
-    warning: 300
-    error: 500
-function_parameter_count:
-    warning: 6
-    error: 8
-type_body_length:
-    warning: 300
-    error: 500
+disabled_rules: # rule identifiers to exclude from running
+  - trailing_whitespace
+  - force_cast
+  - inclusive_language
+  - switch_case_on_newline
+  - comment_spacing
+  - multiline_function_chains
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Pods
+  - Templates
+analyzer_rules:
+  - unused_declaration
+  - unused_import
+opt_in_rules: # some rules are only opt-in
+  - attributes
+  - closure_spacing
+  - collection_alignment
+  - convenience_type
+  - empty_count
+  - empty_string
+  - empty_xctest_method
+  - extension_access_modifier
+  - fallthrough
+  - fatal_error_message
+  - first_where
+  - function_default_parameter_at_end
+  - last_where
+  - lower_acl_than_parent
+  - modifier_order
+  - multiline_function_chains
+  - multiline_literal_brackets
+  - multiline_parameters
+  - operator_usage_whitespace
+  - override_in_extension
+  - pattern_matching_keywords
+  - private_action
+  - private_outlet
+  - redundant_type_annotation
+  - sorted_first_last
+  - strict_fileprivate
+  - switch_case_on_newline
+  - toggle_bool
+  - unavailable_function
+  - vertical_whitespace_closing_braces
+attributes:
+  always_on_same_line:
+    ["@IBOutlet", "@IBAction", "@IBSegueAction", "@NSManaged"]
+  always_on_line_above:
+    ["@IBDesignable", "@IBInspectable", "@available", "@discardableResult"]
+vertical_whitespace:
+  max_empty_lines: 1
+  severity: error
+switch_case_alignment:
+  severity: error
+comma:
+  severity: error
+opening_brace:
+  severity: error
 file_length:
-    warning: 1000
-    error: 1500
-    ignore_comment_only_lines: true
-cyclomatic_complexity:
-    warning: 15
-    error: 25
-reporter: "xcode"
+  warning: 500
+  error: 600
+line_length:
+  warning: 200
+  error: 400
+  ignores_comments: true
+  ignores_urls: true
+  ignores_function_declarations: true
+  ignores_interpolated_strings: true
+type_body_length:
+  warning: 300
+  error: 400
+function_parameter_count:
+  warning: 8
+  error: 10
+function_body_length:
+  warning: 90
+  error: 100
+nesting:
+  type_level: 3
+cyclomatic_complexity: 15
+type_name:
+  min_length: 2
+  max_length:
+    warning: 50
+    error: 60
+identifier_name:
+  min_length: 2
+  max_length: 
+    warning: 50
+    error: 60
+  excluded:
+    - id
