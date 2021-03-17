@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4261E99A83954936AA903BE6 /* Pods_kanto_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D70704A06FFFE34646A67F /* Pods_kanto_test.framework */; };
+		D68B8BFDEDF306A41A576AF0 /* Pods_kanto_test_kanto_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110ED9FCECAF8DE97C2E21D1 /* Pods_kanto_test_kanto_testUITests.framework */; };
+		D9207FA1EC114B748BCB86E2 /* Pods_kanto_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836FCE47363D2A47431684B8 /* Pods_kanto_testTests.framework */; };
 		FD7BA56F26016F7C007A509D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BA56E26016F7C007A509D /* AppDelegate.swift */; };
 		FD7BA57126016F7C007A509D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BA57026016F7C007A509D /* SceneDelegate.swift */; };
 		FD7BA57326016F7C007A509D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BA57226016F7C007A509D /* ViewController.swift */; };
@@ -15,6 +18,9 @@
 		FD7BA57B26016F7E007A509D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7BA57926016F7E007A509D /* LaunchScreen.storyboard */; };
 		FD7BA58626016F7E007A509D /* kanto_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BA58526016F7E007A509D /* kanto_testTests.swift */; };
 		FD7BA59126016F7E007A509D /* kanto_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BA59026016F7E007A509D /* kanto_testUITests.swift */; };
+		FD7BA5A626017E60007A509D /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = FD7BA5A526017E60007A509D /* SwiftPackageProductDependency */; };
+		FD7BA5AC26017ED6007A509D /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = FD7BA5AB26017ED6007A509D /* SwiftPackageProductDependency */; };
+		FD7BA5AE26017ED6007A509D /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = FD7BA5AD26017ED6007A509D /* SwiftPackageProductDependency */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04D70704A06FFFE34646A67F /* Pods_kanto_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kanto_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0698704B4FD3897428D41AD7 /* Pods-kanto-test-kanto-testUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kanto-test-kanto-testUITests.debug.xcconfig"; path = "Target Support Files/Pods-kanto-test-kanto-testUITests/Pods-kanto-test-kanto-testUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		110ED9FCECAF8DE97C2E21D1 /* Pods_kanto_test_kanto_testUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kanto_test_kanto_testUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2736AFC7C2B74D039863841C /* Pods-kanto-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kanto-test.debug.xcconfig"; path = "Target Support Files/Pods-kanto-test/Pods-kanto-test.debug.xcconfig"; sourceTree = "<group>"; };
+		681D3AA51DA9B1A829B09DFE /* Pods-kanto-test-kanto-testUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kanto-test-kanto-testUITests.release.xcconfig"; path = "Target Support Files/Pods-kanto-test-kanto-testUITests/Pods-kanto-test-kanto-testUITests.release.xcconfig"; sourceTree = "<group>"; };
+		836FCE47363D2A47431684B8 /* Pods_kanto_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kanto_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99B42CE3368733DEA358BA56 /* Pods-kanto-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kanto-testTests.release.xcconfig"; path = "Target Support Files/Pods-kanto-testTests/Pods-kanto-testTests.release.xcconfig"; sourceTree = "<group>"; };
+		B6009CC94E416D5CC12375A5 /* Pods-kanto-testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kanto-testTests.debug.xcconfig"; path = "Target Support Files/Pods-kanto-testTests/Pods-kanto-testTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BB4F6D25DB4B2B0CB42FD380 /* Pods-kanto-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kanto-test.release.xcconfig"; path = "Target Support Files/Pods-kanto-test/Pods-kanto-test.release.xcconfig"; sourceTree = "<group>"; };
 		FD7BA56B26016F7C007A509D /* kanto-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kanto-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD7BA56E26016F7C007A509D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD7BA57026016F7C007A509D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +71,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD7BA5AE26017ED6007A509D /* BuildFile in Frameworks */,
+				FD7BA5AC26017ED6007A509D /* BuildFile in Frameworks */,
+				FD7BA5A626017E60007A509D /* BuildFile in Frameworks */,
+				4261E99A83954936AA903BE6 /* Pods_kanto_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9207FA1EC114B748BCB86E2 /* Pods_kanto_testTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +90,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68B8BFDEDF306A41A576AF0 /* Pods_kanto_test_kanto_testUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4006CF356C1A1BF1DFB80A84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04D70704A06FFFE34646A67F /* Pods_kanto_test.framework */,
+				110ED9FCECAF8DE97C2E21D1 /* Pods_kanto_test_kanto_testUITests.framework */,
+				836FCE47363D2A47431684B8 /* Pods_kanto_testTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0509AD8B5D190F1A60737A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2736AFC7C2B74D039863841C /* Pods-kanto-test.debug.xcconfig */,
+				BB4F6D25DB4B2B0CB42FD380 /* Pods-kanto-test.release.xcconfig */,
+				0698704B4FD3897428D41AD7 /* Pods-kanto-test-kanto-testUITests.debug.xcconfig */,
+				681D3AA51DA9B1A829B09DFE /* Pods-kanto-test-kanto-testUITests.release.xcconfig */,
+				B6009CC94E416D5CC12375A5 /* Pods-kanto-testTests.debug.xcconfig */,
+				99B42CE3368733DEA358BA56 /* Pods-kanto-testTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FD7BA56226016F7C007A509D = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +128,8 @@
 				FD7BA58426016F7E007A509D /* kanto-testTests */,
 				FD7BA58F26016F7E007A509D /* kanto-testUITests */,
 				FD7BA56C26016F7C007A509D /* Products */,
+				E0509AD8B5D190F1A60737A3 /* Pods */,
+				4006CF356C1A1BF1DFB80A84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,15 +182,22 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD7BA59526016F7E007A509D /* Build configuration list for PBXNativeTarget "kanto-test" */;
 			buildPhases = (
+				F123A60A89ACB7B51500E70C /* [CP] Check Pods Manifest.lock */,
 				FD7BA56726016F7C007A509D /* Sources */,
 				FD7BA56826016F7C007A509D /* Frameworks */,
 				FD7BA56926016F7C007A509D /* Resources */,
+				FFE81494316533816576B528 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "kanto-test";
+			packageProductDependencies = (
+				FD7BA5A526017E60007A509D /* SwiftPackageProductDependency */,
+				FD7BA5AB26017ED6007A509D /* SwiftPackageProductDependency */,
+				FD7BA5AD26017ED6007A509D /* SwiftPackageProductDependency */,
+			);
 			productName = "kanto-test";
 			productReference = FD7BA56B26016F7C007A509D /* kanto-test.app */;
 			productType = "com.apple.product-type.application";
@@ -152,6 +206,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD7BA59826016F7E007A509D /* Build configuration list for PBXNativeTarget "kanto-testTests" */;
 			buildPhases = (
+				F53EFBBD20C24E64FD92FCB5 /* [CP] Check Pods Manifest.lock */,
 				FD7BA57D26016F7E007A509D /* Sources */,
 				FD7BA57E26016F7E007A509D /* Frameworks */,
 				FD7BA57F26016F7E007A509D /* Resources */,
@@ -170,9 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD7BA59B26016F7E007A509D /* Build configuration list for PBXNativeTarget "kanto-testUITests" */;
 			buildPhases = (
+				84EC13CA9D07E23AEEFC6AFB /* [CP] Check Pods Manifest.lock */,
 				FD7BA58826016F7E007A509D /* Sources */,
 				FD7BA58926016F7E007A509D /* Frameworks */,
 				FD7BA58A26016F7E007A509D /* Resources */,
+				5ADB01FB2BE6766E7264D22F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,6 +272,10 @@
 				Base,
 			);
 			mainGroup = FD7BA56226016F7C007A509D;
+			packageReferences = (
+				FD7BA5A426017E60007A509D /* RemoteSwiftPackageReference */,
+				FD7BA5AA26017ED6007A509D /* RemoteSwiftPackageReference */,
+			);
 			productRefGroup = FD7BA56C26016F7C007A509D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -252,6 +313,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5ADB01FB2BE6766E7264D22F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kanto-test-kanto-testUITests/Pods-kanto-test-kanto-testUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kanto-test-kanto-testUITests/Pods-kanto-test-kanto-testUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kanto-test-kanto-testUITests/Pods-kanto-test-kanto-testUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84EC13CA9D07E23AEEFC6AFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kanto-test-kanto-testUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F123A60A89ACB7B51500E70C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kanto-test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F53EFBBD20C24E64FD92FCB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kanto-testTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFE81494316533816576B528 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kanto-test/Pods-kanto-test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kanto-test/Pods-kanto-test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kanto-test/Pods-kanto-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FD7BA56726016F7C007A509D /* Sources */ = {
@@ -433,6 +597,7 @@
 		};
 		FD7BA59626016F7E007A509D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2736AFC7C2B74D039863841C /* Pods-kanto-test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -451,6 +616,7 @@
 		};
 		FD7BA59726016F7E007A509D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB4F6D25DB4B2B0CB42FD380 /* Pods-kanto-test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -469,6 +635,7 @@
 		};
 		FD7BA59926016F7E007A509D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6009CC94E416D5CC12375A5 /* Pods-kanto-testTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +657,7 @@
 		};
 		FD7BA59A26016F7E007A509D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99B42CE3368733DEA358BA56 /* Pods-kanto-testTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -511,6 +679,7 @@
 		};
 		FD7BA59C26016F7E007A509D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0698704B4FD3897428D41AD7 /* Pods-kanto-test-kanto-testUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +699,7 @@
 		};
 		FD7BA59D26016F7E007A509D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 681D3AA51DA9B1A829B09DFE /* Pods-kanto-test-kanto-testUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -587,6 +757,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FD7BA5A426017E60007A509D /* RemoteSwiftPackageReference */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DeclarativeHub/Bond";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.8.1;
+			};
+		};
+		FD7BA5AA26017ED6007A509D /* RemoteSwiftPackageReference */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.7.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FD7BA5A526017E60007A509D /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD7BA5A426017E60007A509D /* RemoteSwiftPackageReference */;
+			productName = Bond;
+		};
+		FD7BA5AB26017ED6007A509D /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD7BA5AA26017ED6007A509D /* RemoteSwiftPackageReference */;
+			productName = Realm;
+		};
+		FD7BA5AD26017ED6007A509D /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD7BA5AA26017ED6007A509D /* RemoteSwiftPackageReference */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FD7BA56326016F7C007A509D /* Project object */;
 }
