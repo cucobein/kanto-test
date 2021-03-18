@@ -485,6 +485,7 @@
 				FD7BA56826016F7C007A509D /* Frameworks */,
 				FD7BA56926016F7C007A509D /* Resources */,
 				FDEFF7BF2601A83C00047C0C /* Swiftlint */,
+				F4E4521132D14DD792E3CCDB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -528,6 +529,7 @@
 				FD7BA58826016F7E007A509D /* Sources */,
 				FD7BA58926016F7E007A509D /* Frameworks */,
 				FD7BA58A26016F7E007A509D /* Resources */,
+				4CDAECDAD855FFE697CD80AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -624,6 +626,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4CDAECDAD855FFE697CD80AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kanto-test-kanto-testUITests/Pods-kanto-test-kanto-testUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kanto-test-kanto-testUITests/Pods-kanto-test-kanto-testUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kanto-test-kanto-testUITests/Pods-kanto-test-kanto-testUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		84EC13CA9D07E23AEEFC6AFB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -666,6 +685,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4E4521132D14DD792E3CCDB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kanto-test/Pods-kanto-test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kanto-test/Pods-kanto-test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kanto-test/Pods-kanto-test-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F53EFBBD20C24E64FD92FCB5 /* [CP] Check Pods Manifest.lock */ = {

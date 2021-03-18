@@ -4,7 +4,8 @@
 target 'kanto-test' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'Components'
+  pod 'MaterialComponents/TextControls+FilledTextAreas'
+  pod 'MaterialComponents/TextControls+FilledTextFields'
   
   # Pods for kanto-test
   target 'kanto-testTests' do
