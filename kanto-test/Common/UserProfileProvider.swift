@@ -50,4 +50,15 @@ class UserProfileProvider {
             }
         }
     }
+    
+    func fetchUserVideos(completion: @escaping(Result<[VideoData], Error>) -> Void) {
+        apiService.getUserVideos { result in
+            switch result {
+            case .success(let userVideos):
+                completion(.success(userVideos))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }

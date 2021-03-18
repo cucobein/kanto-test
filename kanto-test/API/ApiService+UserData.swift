@@ -16,4 +16,12 @@ extension ApiService {
         let request = ApiRequest(resource: resource)
         perform(request: request, then: handler)
     }
+    
+    typealias GetUserVideosHandler = (Result<[VideoData], Error>) -> Void
+    
+    func getUserVideos(then handler: @escaping GetUserVideosHandler) {
+        let resource = VideosResource()
+        let request = ApiRequest(resource: resource)
+        perform(request: request, then: handler)
+    }
 }

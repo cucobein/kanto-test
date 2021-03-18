@@ -21,6 +21,7 @@ class UserDataResource: ApiResource {
     
     func makeModel(fromData data: Data) throws -> Model {
         let jsonDecoder = JSONDecoder()
+        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
         return try jsonDecoder.decode(Model.self, from: data)
     }
 }

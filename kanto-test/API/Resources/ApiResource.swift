@@ -18,7 +18,7 @@ extension ApiResource where Self.Model: Decodable {
     
     func makeModel(fromData data: Data) throws -> Model {
         let decored = JSONDecoder()
-        decored.keyDecodingStrategy = .useDefaultKeys
+        decored.keyDecodingStrategy = .convertFromSnakeCase
         return try decored.decode(Model.self, from: data)
     }
 }

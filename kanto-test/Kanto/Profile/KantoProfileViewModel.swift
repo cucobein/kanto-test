@@ -40,5 +40,15 @@ private extension KantoProfileViewModel {
             case .failure: ()
             }
         }
+        userProfileProvider.fetchUserVideos { [unowned self] (result) in
+            switch result {
+            case .success(let userVideos):
+                let videos = userVideos.map({ video -> KantoVideoCellDataSource in
+                    return KantoVideoCellDataSource(context: self.dataSource.context, video: video)
+                })
+                self.videos.replace(with: videos)
+            case .failure: ()
+            }
+        }
     }
 }

@@ -40,6 +40,7 @@
 		FD9AD9912603C21B004AE342 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9AD9902603C21B004AE342 /* HTTPMethod.swift */; };
 		FD9AD9962603C27F004AE342 /* URLRequest+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9AD9952603C27F004AE342 /* URLRequest+Helpers.swift */; };
 		FD9AD99B2603C507004AE342 /* ApiService+UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9AD99A2603C507004AE342 /* ApiService+UserData.swift */; };
+		FD9AD9AB2603F3CE004AE342 /* VideosResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9AD9AA2603F3CE004AE342 /* VideosResource.swift */; };
 		FDEFF7E12602333C00047C0C /* KantoEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF7E02602333C00047C0C /* KantoEditProfileViewController.swift */; };
 		FDEFF7E6260233F500047C0C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF7E5260233F500047C0C /* AppCoordinator.swift */; };
 		FDEFF7EB2602350200047C0C /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF7EA2602350200047C0C /* ApiService.swift */; };
@@ -134,6 +135,7 @@
 		FD9AD9902603C21B004AE342 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		FD9AD9952603C27F004AE342 /* URLRequest+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Helpers.swift"; sourceTree = "<group>"; };
 		FD9AD99A2603C507004AE342 /* ApiService+UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiService+UserData.swift"; sourceTree = "<group>"; };
+		FD9AD9AA2603F3CE004AE342 /* VideosResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosResource.swift; sourceTree = "<group>"; };
 		FDEFF7E02602333C00047C0C /* KantoEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantoEditProfileViewController.swift; sourceTree = "<group>"; };
 		FDEFF7E5260233F500047C0C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FDEFF7EA2602350200047C0C /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 				FDEFF82126023BD800047C0C /* ImageResource.swift */,
 				FDEFF82626023BFF00047C0C /* ApiResource.swift */,
 				FD9AD9862603C132004AE342 /* UserDataResource.swift */,
+				FD9AD9AA2603F3CE004AE342 /* VideosResource.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -799,6 +802,7 @@
 				FD3B469D2602F4C800471D07 /* KantoEditProfileViewModel.swift in Sources */,
 				FD3B46B82603282500471D07 /* RounderCornersView.swift in Sources */,
 				FDEFF7EB2602350200047C0C /* ApiService.swift in Sources */,
+				FD9AD9AB2603F3CE004AE342 /* VideosResource.swift in Sources */,
 				FD3B46822602F2DB00471D07 /* KantoProfileViewModel.swift in Sources */,
 				FD3B46612602F06800471D07 /* ViewModel.swift in Sources */,
 				FD7BA57326016F7C007A509D /* KantoProfileViewController.swift in Sources */,
