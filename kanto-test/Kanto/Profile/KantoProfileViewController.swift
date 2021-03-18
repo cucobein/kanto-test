@@ -15,7 +15,7 @@ private enum UserPanelState {
 
 class KantoProfileViewController: UIViewController, ViewControllerProtocol {
 
-    @IBOutlet private weak var userDataPanelView: UIView!
+    @IBOutlet private weak var userDataPanelView: RoundedCornersView!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var gearButton: UIButton!
     @IBOutlet private weak var panelHeightConstraint: NSLayoutConstraint!
@@ -44,7 +44,7 @@ private extension KantoProfileViewController {
             if self.userPanelState == .shown {
                 self.removeUserDataPanel()
                 UIView.animate(withDuration: 1.0) {
-                    self.panelHeightConstraint.constant = 92
+                    self.panelHeightConstraint.constant = 40
                     self.userDataPanelView.alpha = 0
                     self.userPanelState = .hidden
                     self.view.layoutIfNeeded()

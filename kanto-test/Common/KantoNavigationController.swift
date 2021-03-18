@@ -8,7 +8,6 @@
 import UIKit
 
 enum NavigationBarStyle {
-    
     case clear
 }
 
@@ -54,11 +53,6 @@ extension KantoNavigationController: UIGestureRecognizerDelegate {
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         true
-    }
-    
-    // First view controller. You may be unable to push the next one
-    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        viewControllers.count > 1
     }
 }
 

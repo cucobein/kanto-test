@@ -20,12 +20,27 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="hUw-hU-qKL">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5l5-GH-ARS">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5l5-GH-ARS" customClass="RoundedCornersView" customModule="kanto_test" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="360"/>
                                         <color key="backgroundColor" name="MajorelleBlue"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="360" id="NEQ-Zn-fGN"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="32"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftCornerEnable" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCornerEnable" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeftCornerEnable" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRightCornerEnable" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="leftColor">
+                                                <color key="value" name="MajorelleBlue"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="rightColor">
+                                                <color key="value" name="Purple"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iP1-zb-S1B">
                                         <rect key="frame" x="0.0" y="392" width="375" height="275"/>
@@ -40,7 +55,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bh6-Ot-vHg">
-                                <rect key="frame" x="327" y="0.0" width="24" height="24"/>
+                                <rect key="frame" x="327" y="16" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="ZDV-XN-7GD"/>
                                     <constraint firstAttribute="height" constant="24" id="edk-RV-ZRy"/>
@@ -69,9 +84,9 @@
                         <constraints>
                             <constraint firstItem="f4F-8c-kOs" firstAttribute="leading" secondItem="hUw-hU-qKL" secondAttribute="leading" id="4sp-xa-bPN"/>
                             <constraint firstAttribute="bottom" secondItem="TLw-Zo-gtC" secondAttribute="bottom" id="9Ue-Qu-lyy"/>
-                            <constraint firstItem="bh6-Ot-vHg" firstAttribute="top" secondItem="f4F-8c-kOs" secondAttribute="top" id="AS6-n5-zla"/>
+                            <constraint firstItem="bh6-Ot-vHg" firstAttribute="top" secondItem="f4F-8c-kOs" secondAttribute="top" constant="16" id="AS6-n5-zla"/>
                             <constraint firstAttribute="trailing" secondItem="bh6-Ot-vHg" secondAttribute="trailing" constant="24" id="Aub-gx-rUv"/>
-                            <constraint firstItem="hUw-hU-qKL" firstAttribute="top" secondItem="pv2-MI-vGA" secondAttribute="top" id="S48-pU-pgd"/>
+                            <constraint firstItem="hUw-hU-qKL" firstAttribute="top" secondItem="f4F-8c-kOs" secondAttribute="top" id="S48-pU-pgd"/>
                             <constraint firstItem="f4F-8c-kOs" firstAttribute="trailing" secondItem="hUw-hU-qKL" secondAttribute="trailing" id="ZrB-c1-q78"/>
                             <constraint firstItem="TLw-Zo-gtC" firstAttribute="centerX" secondItem="f4F-8c-kOs" secondAttribute="centerX" id="f95-CX-fVt"/>
                             <constraint firstItem="TLw-Zo-gtC" firstAttribute="leading" secondItem="hUw-hU-qKL" secondAttribute="leading" id="iwJ-0C-4il"/>
@@ -94,6 +109,9 @@
         <image name="gear" width="384" height="385"/>
         <namedColor name="MajorelleBlue">
             <color red="0.37647058823529411" green="0.31372549019607843" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Purple">
+            <color red="0.55686274509803924" green="0.23529411764705882" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
