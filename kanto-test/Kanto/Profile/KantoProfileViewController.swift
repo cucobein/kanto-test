@@ -14,7 +14,7 @@ private enum UserPanelState {
 }
 
 class KantoProfileViewController: UIViewController, ViewControllerProtocol {
-
+    
     @IBOutlet private weak var userDataPanelView: RoundedCornersView!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var gearButton: UIButton!
@@ -22,7 +22,7 @@ class KantoProfileViewController: UIViewController, ViewControllerProtocol {
     
     private var viewModel: KantoProfileViewModel!
     private var userPanelState = UserPanelState.shown
-    private var userData: KantoProfileUserData?
+    private var userDataView: KantoProfileUserDataView?
     
     func configure(with viewModel: KantoProfileViewModel) {
         self.viewModel = viewModel
@@ -61,22 +61,35 @@ private extension KantoProfileViewController {
             }
         }
         
+        _ = viewModel.userData.observeNext { [weak self] in
+            guard let self = self,
+                  let data = $0 else { return }
+            if let userDataView = self.userDataView {
+                userDataView.configure(with: data)
+            } else {
+                self.addUserDataPanel()
+            }
+        }
+        
         viewModel.videos.bind(to: tableView, cellType: KantoVideoCell.self) { $0.configure(with: $1) }
     }
     
     func addUserDataPanel() {
-        userData = KantoProfileUserData()
-        if let userData = userData {
-            userData.configure(with: KantoProfileUserDataViewModel())
-            userDataPanelView.addSubview(userData)
-            userData.pin(to: userDataPanelView)
+        if let data = viewModel.userData.value {
+            userDataView = KantoProfileUserDataView()
+            guard let userDataView = userDataView else {
+                return
+            }
+            userDataView.configure(with: data)
+            userDataPanelView.addSubview(userDataView)
+            userDataView.pin(to: userDataPanelView)
         }
     }
     
     func removeUserDataPanel() {
-        if let userData = userData {
-            userData.removeFromSuperview()
-            self.userData = nil
+        if let userDataView = userDataView {
+            userDataView.removeFromSuperview()
+            self.userDataView = nil
         }
     }
 }

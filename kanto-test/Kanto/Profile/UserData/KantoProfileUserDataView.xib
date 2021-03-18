@@ -17,7 +17,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KantoProfileUserData" customModule="kanto_test" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KantoProfileUserDataView" customModule="kanto_test" customModuleProvider="target">
             <connections>
                 <outlet property="biographyLabel" destination="sn8-8I-QNv" id="fIt-kJ-ia1"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="p8d-I4-8nb"/>

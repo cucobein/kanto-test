@@ -25,7 +25,7 @@ class UserProfileProvider {
             self?.userProfile.value = $0
         }
     }
-
+    
     var name: String? {
         guard let profile = userProfile.value else {
             return nil
@@ -38,5 +38,16 @@ class UserProfileProvider {
             return nil
         }
         return profile.userName
+    }
+    
+    func fetchUserDataProfile(completion: @escaping(Result<UserData, Error>) -> Void) {
+        apiService.getUserData { result in
+            switch result {
+            case .success(let userData):
+                completion(.success(userData))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
     }
 }

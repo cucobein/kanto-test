@@ -7,13 +7,16 @@
 
 import UIKit
 
-struct KantoVideoCellViewModel {  }
+struct KantoVideoCellDataSource: ViewModelDataSourceProtocol {
+    
+    var context: Context
+}
 
 final class KantoVideoCell: UITableViewCell {
     
-    private var viewModel: KantoVideoCellViewModel!
+    private var dataSource: KantoVideoCellDataSource!
     
-    func configure(with viewModel: KantoVideoCellViewModel) {
-        self.viewModel = viewModel
+    func configure(with dataSource: KantoVideoCellDataSource) {
+        self.dataSource = dataSource
     }
 }
