@@ -7,9 +7,9 @@
 
 import UIKit
 
-final class KantoVideoCellViewModel {  }
+struct KantoVideoCellViewModel {  }
 
-final class KantoVideoCell: XibView {
+final class KantoVideoCell: UITableViewCell {
     
     private var viewModel: KantoVideoCellViewModel!
     

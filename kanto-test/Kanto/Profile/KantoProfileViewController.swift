@@ -60,6 +60,8 @@ private extension KantoProfileViewController {
                 })
             }
         }
+        
+        viewModel.videos.bind(to: tableView, cellType: KantoVideoCell.self) { $0.configure(with: $1) }
     }
     
     func addUserDataPanel() {
