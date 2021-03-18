@@ -25,8 +25,8 @@ final class KantoLaunchScreenViewController: UIViewController, StoryboardInstant
         animationView.center(to: containerView)
         let containerViewSize = containerView.frame.size
         animationView.setSize(containerViewSize.width, containerViewSize.height)
-        animationView.playAnimation(.loading, loopMode: .playOnce)
-        _ = Timer.scheduledTimer(timeInterval: TimeInterval(3.0),
+        animationView.playAnimation(.launch, loopMode: .playOnce)
+        _ = Timer.scheduledTimer(timeInterval: TimeInterval(2.0),
                                  target: self,
                                  selector: #selector(self.completionHandler),
                                  userInfo: nil,

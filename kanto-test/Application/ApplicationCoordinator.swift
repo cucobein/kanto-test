@@ -18,8 +18,6 @@ class ApplicationCoordinator {
                 persistenceController: persistenceController)
     }()
     
-    init() { }
-    
     func initialize(on window: UIWindow, _ application: UIApplication, and launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         startApplication(on: window)
     }
@@ -48,7 +46,6 @@ extension ApplicationCoordinator {
 private extension ApplicationCoordinator {
     
     func startProfileFlow(on navigationController: UINavigationController) {
-
 //        let dashboardComercioBuilder = DashboardComercioBuilder.build(with: DashboardComercioViewModelDataSource(context: context))
 //        let viewcontrollers = [dashboardComercioBuilder, navigationController.viewControllers.last!]
 //        navigationController.viewControllers = viewcontrollers

@@ -13,9 +13,7 @@
 		FD7BA56F26016F7C007A509D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BA56E26016F7C007A509D /* AppDelegate.swift */; };
 		FD7BA57126016F7C007A509D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BA57026016F7C007A509D /* SceneDelegate.swift */; };
 		FD7BA57326016F7C007A509D /* KantoProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BA57226016F7C007A509D /* KantoProfileViewController.swift */; };
-		FD7BA57626016F7C007A509D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7BA57426016F7C007A509D /* Main.storyboard */; };
 		FD7BA57826016F7E007A509D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD7BA57726016F7E007A509D /* Assets.xcassets */; };
-		FD7BA57B26016F7E007A509D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7BA57926016F7E007A509D /* LaunchScreen.storyboard */; };
 		FD7BA5A626017E60007A509D /* Bond in Frameworks */ = {isa = PBXBuildFile; productRef = FD7BA5A526017E60007A509D /* Bond */; };
 		FD7BA5AC26017ED6007A509D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = FD7BA5AB26017ED6007A509D /* Realm */; };
 		FD7BA5AE26017ED6007A509D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FD7BA5AD26017ED6007A509D /* RealmSwift */; };
@@ -43,6 +41,14 @@
 		FDEFF88C260282DB00047C0C /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF88B260282DB00047C0C /* Storyboard.swift */; };
 		FDEFF8942602B4BE00047C0C /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF8932602B4BE00047C0C /* UIView+Autolayout.swift */; };
 		FDEFF8992602BC8400047C0C /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF8982602BC8400047C0C /* AnimationView.swift */; };
+		FDEFF8AB2602C24500047C0C /* KantoLaunchScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDEFF8AA2602C24500047C0C /* KantoLaunchScreenViewController.storyboard */; };
+		FDEFF8D02602CE2200047C0C /* Animosa-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FDEFF8CB2602CE2200047C0C /* Animosa-ExtraLight.ttf */; };
+		FDEFF8D12602CE2200047C0C /* Animosa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FDEFF8CC2602CE2200047C0C /* Animosa-Regular.ttf */; };
+		FDEFF8D22602CE2200047C0C /* Animosa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FDEFF8CD2602CE2200047C0C /* Animosa-Bold.ttf */; };
+		FDEFF8D32602CE2200047C0C /* Animosa-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FDEFF8CE2602CE2200047C0C /* Animosa-ExtraBold.ttf */; };
+		FDEFF8D42602CE2200047C0C /* Animosa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FDEFF8CF2602CE2200047C0C /* Animosa-Light.ttf */; };
+		FDEFF8DF2602D33900047C0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDEFF8DE2602D33900047C0C /* LaunchScreen.storyboard */; };
+		FDEFF8EC2602DDBA00047C0C /* launch.json in Resources */ = {isa = PBXBuildFile; fileRef = FDEFF8EB2602DDBA00047C0C /* launch.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,9 +82,7 @@
 		FD7BA56E26016F7C007A509D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD7BA57026016F7C007A509D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FD7BA57226016F7C007A509D /* KantoProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantoProfileViewController.swift; sourceTree = "<group>"; };
-		FD7BA57526016F7C007A509D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD7BA57726016F7E007A509D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FD7BA57A26016F7E007A509D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD7BA57C26016F7E007A509D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD7BA58126016F7E007A509D /* kanto-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kanto-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD7BA58C26016F7E007A509D /* kanto-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kanto-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +109,14 @@
 		FDEFF88B260282DB00047C0C /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		FDEFF8932602B4BE00047C0C /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 		FDEFF8982602BC8400047C0C /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation\U0010View.swift"; sourceTree = "<group>"; };
+		FDEFF8AA2602C24500047C0C /* KantoLaunchScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KantoLaunchScreenViewController.storyboard; sourceTree = "<group>"; };
+		FDEFF8CB2602CE2200047C0C /* Animosa-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Animosa-ExtraLight.ttf"; sourceTree = "<group>"; };
+		FDEFF8CC2602CE2200047C0C /* Animosa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Animosa-Regular.ttf"; sourceTree = "<group>"; };
+		FDEFF8CD2602CE2200047C0C /* Animosa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Animosa-Bold.ttf"; sourceTree = "<group>"; };
+		FDEFF8CE2602CE2200047C0C /* Animosa-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Animosa-ExtraBold.ttf"; sourceTree = "<group>"; };
+		FDEFF8CF2602CE2200047C0C /* Animosa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Animosa-Light.ttf"; sourceTree = "<group>"; };
+		FDEFF8DE2602D33900047C0C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FDEFF8EB2602DDBA00047C0C /* launch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = launch.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,10 +204,7 @@
 				FDEFF7D426022D5400047C0C /* Application */,
 				FDEFF7D82602327B00047C0C /* Kanto */,
 				FDEFF7FF2602391D00047C0C /* Utils */,
-				FD7BA57426016F7C007A509D /* Main.storyboard */,
-				FD7BA57726016F7E007A509D /* Assets.xcassets */,
-				FD7BA57926016F7E007A509D /* LaunchScreen.storyboard */,
-				FD7BA57C26016F7E007A509D /* Info.plist */,
+				FDEFF8AF2602C2E300047C0C /* Resources */,
 			);
 			path = "kanto-test";
 			sourceTree = "<group>";
@@ -224,9 +233,8 @@
 		FDEFF7D82602327B00047C0C /* Kanto */ = {
 			isa = PBXGroup;
 			children = (
-				FD7BA57226016F7C007A509D /* KantoProfileViewController.swift */,
-				FDEFF7E02602333C00047C0C /* KantoEditProfileViewController.swift */,
-				FDEFF8722602814F00047C0C /* KantoLaunchScreenViewController.swift */,
+				FDEFF8A42602C14300047C0C /* Launch */,
+				FDEFF8A52602C14800047C0C /* Profile */,
 			);
 			path = Kanto;
 			sourceTree = "<group>";
@@ -321,6 +329,64 @@
 				FDEFF7FA260237B600047C0C /* UserProfile.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FDEFF8A42602C14300047C0C /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				FDEFF8DE2602D33900047C0C /* LaunchScreen.storyboard */,
+				FDEFF8722602814F00047C0C /* KantoLaunchScreenViewController.swift */,
+				FDEFF8AA2602C24500047C0C /* KantoLaunchScreenViewController.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		FDEFF8A52602C14800047C0C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FDEFF8E62602D7B300047C0C /* Edit */,
+				FD7BA57226016F7C007A509D /* KantoProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FDEFF8AF2602C2E300047C0C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FDEFF8EA2602DC9700047C0C /* Lottie */,
+				FDEFF8C22602CBDB00047C0C /* Fonts */,
+				FD7BA57726016F7E007A509D /* Assets.xcassets */,
+				FD7BA57C26016F7E007A509D /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FDEFF8C22602CBDB00047C0C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FDEFF8CD2602CE2200047C0C /* Animosa-Bold.ttf */,
+				FDEFF8CE2602CE2200047C0C /* Animosa-ExtraBold.ttf */,
+				FDEFF8CB2602CE2200047C0C /* Animosa-ExtraLight.ttf */,
+				FDEFF8CF2602CE2200047C0C /* Animosa-Light.ttf */,
+				FDEFF8CC2602CE2200047C0C /* Animosa-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FDEFF8E62602D7B300047C0C /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				FDEFF7E02602333C00047C0C /* KantoEditProfileViewController.swift */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		FDEFF8EA2602DC9700047C0C /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				FDEFF8EB2602DDBA00047C0C /* launch.json */,
+			);
+			path = Lottie;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,9 +509,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD7BA57B26016F7E007A509D /* LaunchScreen.storyboard in Resources */,
+				FDEFF8D42602CE2200047C0C /* Animosa-Light.ttf in Resources */,
+				FDEFF8DF2602D33900047C0C /* LaunchScreen.storyboard in Resources */,
+				FDEFF8AB2602C24500047C0C /* KantoLaunchScreenViewController.storyboard in Resources */,
+				FDEFF8D02602CE2200047C0C /* Animosa-ExtraLight.ttf in Resources */,
+				FDEFF8EC2602DDBA00047C0C /* launch.json in Resources */,
+				FDEFF8D12602CE2200047C0C /* Animosa-Regular.ttf in Resources */,
+				FDEFF8D32602CE2200047C0C /* Animosa-ExtraBold.ttf in Resources */,
 				FD7BA57826016F7E007A509D /* Assets.xcassets in Resources */,
-				FD7BA57626016F7C007A509D /* Main.storyboard in Resources */,
+				FDEFF8D22602CE2200047C0C /* Animosa-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,25 +721,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		FD7BA57426016F7C007A509D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FD7BA57526016F7C007A509D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FD7BA57926016F7E007A509D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FD7BA57A26016F7E007A509D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		FD7BA59326016F7E007A509D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -792,7 +845,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "kanto-test/Info.plist";
+				INFOPLIST_FILE = "kanto-test/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -800,7 +853,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "cucobein.kanto-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -811,7 +864,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "kanto-test/Info.plist";
+				INFOPLIST_FILE = "kanto-test/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -819,7 +872,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "cucobein.kanto-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

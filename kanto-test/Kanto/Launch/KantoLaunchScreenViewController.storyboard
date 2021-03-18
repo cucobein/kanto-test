@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BkN-2j-Uzf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Kanto Launch Screen View Controller-->
+        <scene sceneID="ZDV-jg-D3S">
+            <objects>
+                <viewController storyboardIdentifier="KantoLaunchScreenViewController" id="BkN-2j-Uzf" customClass="KantoLaunchScreenViewController" customModule="kanto_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uII-ek-4ai">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bYg-vp-n3U">
+                                <rect key="frame" x="117" y="363" width="180" height="180"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="g0f-MW-V7F"/>
+                                    <constraint firstAttribute="height" constant="180" id="yku-t8-3Q9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ka4-AC-4xe"/>
+                        <color key="backgroundColor" name="MajorelleBlue"/>
+                        <constraints>
+                            <constraint firstItem="bYg-vp-n3U" firstAttribute="centerX" secondItem="Ka4-AC-4xe" secondAttribute="centerX" id="e7q-w6-jgf"/>
+                            <constraint firstItem="bYg-vp-n3U" firstAttribute="centerY" secondItem="Ka4-AC-4xe" secondAttribute="centerY" id="eWT-zf-sGI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="bYg-vp-n3U" id="Zet-Nz-IEC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EIp-AM-wJi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-322" y="111"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="MajorelleBlue">
+            <color red="0.37647058823529411" green="0.31372549019607843" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
