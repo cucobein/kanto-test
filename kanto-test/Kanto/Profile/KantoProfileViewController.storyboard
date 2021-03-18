@@ -80,7 +80,7 @@
                             </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f4F-8c-kOs"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="f4F-8c-kOs" firstAttribute="leading" secondItem="hUw-hU-qKL" secondAttribute="leading" id="4sp-xa-bPN"/>
                             <constraint firstAttribute="bottom" secondItem="TLw-Zo-gtC" secondAttribute="bottom" id="9Ue-Qu-lyy"/>

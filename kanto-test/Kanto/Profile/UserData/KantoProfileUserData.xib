@@ -36,7 +36,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zuf-tp-apg" userLabel="Profile Data">
-                    <rect key="frame" x="16" y="16" width="382" height="308"/>
+                    <rect key="frame" x="16" y="32" width="382" height="292"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDX-in-Xnr">
                             <rect key="frame" x="151" y="0.0" width="80" height="80"/>
@@ -70,13 +70,13 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Esta es mi biografía" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sn8-8I-QNv">
-                            <rect key="frame" x="0.0" y="133" width="382" height="72"/>
+                            <rect key="frame" x="0.0" y="133" width="382" height="56"/>
                             <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cxr-bY-4pp">
-                            <rect key="frame" x="153.5" y="209" width="75" height="27"/>
+                            <rect key="frame" x="153.5" y="193" width="75" height="27"/>
                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="12"/>
                             <state key="normal" title="    Edit profile    ">
@@ -84,16 +84,16 @@
                             </state>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7yb-j9-Aca" userLabel="Separator">
-                            <rect key="frame" x="51.5" y="240" width="279" height="8"/>
+                            <rect key="frame" x="51.5" y="224" width="279" height="8"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="8" id="nxp-wx-QdZ"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FoJ-zW-JoQ" userLabel="Followers">
-                            <rect key="frame" x="0.0" y="252" width="382" height="56"/>
+                            <rect key="frame" x="0.0" y="236" width="382" height="56"/>
                             <subviews>
-                                <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNV-sC-cYc" userLabel="Background" customClass="RoundedCornersView" customModule="kanto_test" customModuleProvider="target">
+                                <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNV-sC-cYc" userLabel="Background" customClass="RoundedCornersView" customModule="kanto_test" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="382" height="56"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
@@ -200,7 +200,7 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="zuf-tp-apg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="4Pz-34-bCO"/>
+                <constraint firstItem="zuf-tp-apg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="32" id="4Pz-34-bCO"/>
                 <constraint firstAttribute="trailing" secondItem="zuf-tp-apg" secondAttribute="trailing" constant="16" id="Vrt-Zs-iFN"/>
                 <constraint firstItem="zuf-tp-apg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="f1K-d2-QwP"/>
                 <constraint firstAttribute="bottom" secondItem="zuf-tp-apg" secondAttribute="bottom" constant="16" id="n5e-Vi-8D8"/>

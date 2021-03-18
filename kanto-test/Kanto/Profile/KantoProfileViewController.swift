@@ -43,14 +43,14 @@ private extension KantoProfileViewController {
             guard let self = self else { return }
             if self.userPanelState == .shown {
                 self.removeUserDataPanel()
-                UIView.animate(withDuration: 1.0) {
+                UIView.animate(withDuration: 0.5) {
                     self.panelHeightConstraint.constant = 40
                     self.userDataPanelView.alpha = 0
                     self.userPanelState = .hidden
                     self.view.layoutIfNeeded()
                 }
             } else {
-                UIView.animate(withDuration: 1.0, animations: {
+                UIView.animate(withDuration: 0.5, animations: {
                     self.panelHeightConstraint.constant = 340
                     self.userDataPanelView.alpha = 1
                     self.userPanelState = .shown
