@@ -14,6 +14,7 @@ final class KantoLaunchScreenViewController: UIViewController, StoryboardInstant
     var animationFinishedHandler: (() -> Void)?
 
     private let animationView = AnimationView()
+    private let animationDuration = TimeInterval(3.0)
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
@@ -26,7 +27,7 @@ final class KantoLaunchScreenViewController: UIViewController, StoryboardInstant
         let containerViewSize = containerView.frame.size
         animationView.setSize(containerViewSize.width, containerViewSize.height)
         animationView.playAnimation(.launch, loopMode: .playOnce)
-        _ = Timer.scheduledTimer(timeInterval: TimeInterval(2.0),
+        _ = Timer.scheduledTimer(timeInterval: animationDuration,
                                  target: self,
                                  selector: #selector(self.completionHandler),
                                  userInfo: nil,

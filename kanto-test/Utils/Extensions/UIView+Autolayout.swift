@@ -33,7 +33,6 @@ extension UIView {
         pin(toGuide: view, anchor: anchor, margin: margin)
     }
     
-    // periphery:ignore
     func pin(toSafeAreaOf view: UIView, anchor: LayoutAnchor = .all, margin: CGFloat = 0) {
         pin(toGuide: view.safeAreaLayoutGuide, anchor: anchor, margin: margin)
     }

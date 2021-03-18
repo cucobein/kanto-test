@@ -9,8 +9,8 @@ import Foundation
 import Lottie
 
 enum AnimationGallery: String {
-    case loading = "loading"
-    case launch = "launch"
+    case loading
+    case launch
 }
 
 extension AnimationView {

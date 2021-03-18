@@ -49,7 +49,6 @@ class PersistenceController {
         }
     }
     
-//    // swiftlint:disable:next function_body_length
 //    func storeUserProfile(with account: Account,
 //                          andEmail email: String,
 //                          andLastUserLogin lastUserLogin: Int?) {

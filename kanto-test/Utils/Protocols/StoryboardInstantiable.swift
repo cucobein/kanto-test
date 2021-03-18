@@ -8,6 +8,7 @@
 import UIKit
 
 protocol StoryboardInstantiable {
+    
     static func instantiate(from storyboard: Storyboard) -> Self
 }
 

@@ -10,8 +10,20 @@
 		4261E99A83954936AA903BE6 /* Pods_kanto_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D70704A06FFFE34646A67F /* Pods_kanto_test.framework */; };
 		D68B8BFDEDF306A41A576AF0 /* Pods_kanto_test_kanto_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110ED9FCECAF8DE97C2E21D1 /* Pods_kanto_test_kanto_testUITests.framework */; };
 		D9207FA1EC114B748BCB86E2 /* Pods_kanto_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836FCE47363D2A47431684B8 /* Pods_kanto_testTests.framework */; };
+		FD3B464C2602EFEC00471D07 /* KantoProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B464B2602EFEC00471D07 /* KantoProfileBuilder.swift */; };
+		FD3B46572602F01E00471D07 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B46562602F01E00471D07 /* Builder.swift */; };
+		FD3B465C2602F04100471D07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B465B2602F04100471D07 /* ViewController.swift */; };
+		FD3B46612602F06800471D07 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B46602602F06800471D07 /* ViewModel.swift */; };
+		FD3B46662602F08100471D07 /* ViewModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B46652602F08100471D07 /* ViewModelDataSource.swift */; };
+		FD3B466B2602F0A200471D07 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B466A2602F0A200471D07 /* Router.swift */; };
+		FD3B46702602F17600471D07 /* KantoProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B466F2602F17600471D07 /* KantoProfileRouter.swift */; };
+		FD3B46782602F1F900471D07 /* KantoProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3B46772602F1F900471D07 /* KantoProfileViewController.storyboard */; };
+		FD3B467D2602F25B00471D07 /* KantoEditProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3B467C2602F25B00471D07 /* KantoEditProfileViewController.storyboard */; };
+		FD3B46822602F2DB00471D07 /* KantoProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B46812602F2DB00471D07 /* KantoProfileViewModel.swift */; };
+		FD3B468A2602F3A800471D07 /* KantoEditProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B46892602F3A800471D07 /* KantoEditProfileBuilder.swift */; };
+		FD3B46952602F43500471D07 /* KantoEditProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B46942602F43500471D07 /* KantoEditProfileRouter.swift */; };
+		FD3B469D2602F4C800471D07 /* KantoEditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B469C2602F4C800471D07 /* KantoEditProfileViewModel.swift */; };
 		FD7BA56F26016F7C007A509D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BA56E26016F7C007A509D /* AppDelegate.swift */; };
-		FD7BA57126016F7C007A509D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BA57026016F7C007A509D /* SceneDelegate.swift */; };
 		FD7BA57326016F7C007A509D /* KantoProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BA57226016F7C007A509D /* KantoProfileViewController.swift */; };
 		FD7BA57826016F7E007A509D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD7BA57726016F7E007A509D /* Assets.xcassets */; };
 		FD7BA5A626017E60007A509D /* Bond in Frameworks */ = {isa = PBXBuildFile; productRef = FD7BA5A526017E60007A509D /* Bond */; };
@@ -49,6 +61,8 @@
 		FDEFF8D42602CE2200047C0C /* Animosa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FDEFF8CF2602CE2200047C0C /* Animosa-Light.ttf */; };
 		FDEFF8DF2602D33900047C0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDEFF8DE2602D33900047C0C /* LaunchScreen.storyboard */; };
 		FDEFF8EC2602DDBA00047C0C /* launch.json in Resources */ = {isa = PBXBuildFile; fileRef = FDEFF8EB2602DDBA00047C0C /* launch.json */; };
+		FDEFF9202602E88000047C0C /* KantoNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF91F2602E87F00047C0C /* KantoNavigationController.swift */; };
+		FDEFF9252602E8B100047C0C /* UIFont+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF9242602E8B100047C0C /* UIFont+Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,9 +92,21 @@
 		99B42CE3368733DEA358BA56 /* Pods-kanto-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kanto-testTests.release.xcconfig"; path = "Target Support Files/Pods-kanto-testTests/Pods-kanto-testTests.release.xcconfig"; sourceTree = "<group>"; };
 		B6009CC94E416D5CC12375A5 /* Pods-kanto-testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kanto-testTests.debug.xcconfig"; path = "Target Support Files/Pods-kanto-testTests/Pods-kanto-testTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB4F6D25DB4B2B0CB42FD380 /* Pods-kanto-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kanto-test.release.xcconfig"; path = "Target Support Files/Pods-kanto-test/Pods-kanto-test.release.xcconfig"; sourceTree = "<group>"; };
+		FD3B464B2602EFEC00471D07 /* KantoProfileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantoProfileBuilder.swift; sourceTree = "<group>"; };
+		FD3B46562602F01E00471D07 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		FD3B465B2602F04100471D07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FD3B46602602F06800471D07 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		FD3B46652602F08100471D07 /* ViewModelDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDataSource.swift; sourceTree = "<group>"; };
+		FD3B466A2602F0A200471D07 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FD3B466F2602F17600471D07 /* KantoProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantoProfileRouter.swift; sourceTree = "<group>"; };
+		FD3B46772602F1F900471D07 /* KantoProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KantoProfileViewController.storyboard; sourceTree = "<group>"; };
+		FD3B467C2602F25B00471D07 /* KantoEditProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KantoEditProfileViewController.storyboard; sourceTree = "<group>"; };
+		FD3B46812602F2DB00471D07 /* KantoProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantoProfileViewModel.swift; sourceTree = "<group>"; };
+		FD3B46892602F3A800471D07 /* KantoEditProfileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantoEditProfileBuilder.swift; sourceTree = "<group>"; };
+		FD3B46942602F43500471D07 /* KantoEditProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantoEditProfileRouter.swift; sourceTree = "<group>"; };
+		FD3B469C2602F4C800471D07 /* KantoEditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantoEditProfileViewModel.swift; sourceTree = "<group>"; };
 		FD7BA56B26016F7C007A509D /* kanto-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kanto-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD7BA56E26016F7C007A509D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD7BA57026016F7C007A509D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FD7BA57226016F7C007A509D /* KantoProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantoProfileViewController.swift; sourceTree = "<group>"; };
 		FD7BA57726016F7E007A509D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD7BA57C26016F7E007A509D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,6 +143,8 @@
 		FDEFF8CF2602CE2200047C0C /* Animosa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Animosa-Light.ttf"; sourceTree = "<group>"; };
 		FDEFF8DE2602D33900047C0C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDEFF8EB2602DDBA00047C0C /* launch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = launch.json; sourceTree = "<group>"; };
+		FDEFF91F2602E87F00047C0C /* KantoNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantoNavigationController.swift; sourceTree = "<group>"; };
+		FDEFF9242602E8B100047C0C /* UIFont+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +202,18 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FD3B464A2602EFBC00471D07 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				FD3B46562602F01E00471D07 /* Builder.swift */,
+				FD3B465B2602F04100471D07 /* ViewController.swift */,
+				FD3B46602602F06800471D07 /* ViewModel.swift */,
+				FD3B46652602F08100471D07 /* ViewModelDataSource.swift */,
+				FD3B466A2602F0A200471D07 /* Router.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
 		FD7BA56226016F7C007A509D = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +242,7 @@
 				FDEFF7EF2602359900047C0C /* Persistence */,
 				FDEFF7D326022D3700047C0C /* API */,
 				FDEFF7D426022D5400047C0C /* Application */,
+				FD3B464A2602EFBC00471D07 /* MVVM */,
 				FDEFF7D82602327B00047C0C /* Kanto */,
 				FDEFF7FF2602391D00047C0C /* Utils */,
 				FDEFF8AF2602C2E300047C0C /* Resources */,
@@ -224,7 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				FD7BA56E26016F7C007A509D /* AppDelegate.swift */,
-				FD7BA57026016F7C007A509D /* SceneDelegate.swift */,
 				FDEFF7E5260233F500047C0C /* ApplicationCoordinator.swift */,
 			);
 			path = Application;
@@ -294,6 +334,7 @@
 				FDEFF8512602415100047C0C /* String+NonDigits.swift */,
 				FDEFF856260241A900047C0C /* Data+Helpers.swift */,
 				FDEFF8932602B4BE00047C0C /* UIView+Autolayout.swift */,
+				FDEFF9242602E8B100047C0C /* UIFont+Helpers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -319,6 +360,7 @@
 			children = (
 				FDEFF88B260282DB00047C0C /* Storyboard.swift */,
 				FDEFF84726023E7A00047C0C /* UserProfileProvider.swift */,
+				FDEFF91F2602E87F00047C0C /* KantoNavigationController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -335,8 +377,8 @@
 			isa = PBXGroup;
 			children = (
 				FDEFF8DE2602D33900047C0C /* LaunchScreen.storyboard */,
-				FDEFF8722602814F00047C0C /* KantoLaunchScreenViewController.swift */,
 				FDEFF8AA2602C24500047C0C /* KantoLaunchScreenViewController.storyboard */,
+				FDEFF8722602814F00047C0C /* KantoLaunchScreenViewController.swift */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -345,7 +387,11 @@
 			isa = PBXGroup;
 			children = (
 				FDEFF8E62602D7B300047C0C /* Edit */,
+				FD3B464B2602EFEC00471D07 /* KantoProfileBuilder.swift */,
+				FD3B466F2602F17600471D07 /* KantoProfileRouter.swift */,
+				FD3B46772602F1F900471D07 /* KantoProfileViewController.storyboard */,
 				FD7BA57226016F7C007A509D /* KantoProfileViewController.swift */,
+				FD3B46812602F2DB00471D07 /* KantoProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -376,7 +422,11 @@
 		FDEFF8E62602D7B300047C0C /* Edit */ = {
 			isa = PBXGroup;
 			children = (
+				FD3B46892602F3A800471D07 /* KantoEditProfileBuilder.swift */,
+				FD3B46942602F43500471D07 /* KantoEditProfileRouter.swift */,
+				FD3B467C2602F25B00471D07 /* KantoEditProfileViewController.storyboard */,
 				FDEFF7E02602333C00047C0C /* KantoEditProfileViewController.swift */,
+				FD3B469C2602F4C800471D07 /* KantoEditProfileViewModel.swift */,
 			);
 			path = Edit;
 			sourceTree = "<group>";
@@ -509,6 +559,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3B467D2602F25B00471D07 /* KantoEditProfileViewController.storyboard in Resources */,
 				FDEFF8D42602CE2200047C0C /* Animosa-Light.ttf in Resources */,
 				FDEFF8DF2602D33900047C0C /* LaunchScreen.storyboard in Resources */,
 				FDEFF8AB2602C24500047C0C /* KantoLaunchScreenViewController.storyboard in Resources */,
@@ -516,6 +567,7 @@
 				FDEFF8EC2602DDBA00047C0C /* launch.json in Resources */,
 				FDEFF8D12602CE2200047C0C /* Animosa-Regular.ttf in Resources */,
 				FDEFF8D32602CE2200047C0C /* Animosa-ExtraBold.ttf in Resources */,
+				FD3B46782602F1F900471D07 /* KantoProfileViewController.storyboard in Resources */,
 				FD7BA57826016F7E007A509D /* Assets.xcassets in Resources */,
 				FDEFF8D22602CE2200047C0C /* Animosa-Bold.ttf in Resources */,
 			);
@@ -663,15 +715,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3B465C2602F04100471D07 /* ViewController.swift in Sources */,
 				FDEFF7E6260233F500047C0C /* ApplicationCoordinator.swift in Sources */,
 				FDEFF81926023BA500047C0C /* ApiService+CDN.swift in Sources */,
 				FDEFF82D26023C3700047C0C /* NetworkRequest.swift in Sources */,
 				FDEFF84826023E7A00047C0C /* UserProfileProvider.swift in Sources */,
 				FDEFF88C260282DB00047C0C /* Storyboard.swift in Sources */,
+				FD3B464C2602EFEC00471D07 /* KantoProfileBuilder.swift in Sources */,
 				FDEFF7F1260235E000047C0C /* PersistenceController.swift in Sources */,
 				FDEFF7E12602333C00047C0C /* KantoEditProfileViewController.swift in Sources */,
 				FDEFF8942602B4BE00047C0C /* UIView+Autolayout.swift in Sources */,
 				FDEFF80926023A7000047C0C /* KeychainHelper.swift in Sources */,
+				FD3B46662602F08100471D07 /* ViewModelDataSource.swift in Sources */,
 				FDEFF83B26023CE600047C0C /* Request.swift in Sources */,
 				FDEFF8992602BC8400047C0C /* AnimationView.swift in Sources */,
 				FDEFF857260241A900047C0C /* Data+Helpers.swift in Sources */,
@@ -681,13 +736,22 @@
 				FDEFF82726023BFF00047C0C /* ApiResource.swift in Sources */,
 				FDEFF7F62602360B00047C0C /* KeyValueStorage.swift in Sources */,
 				FDEFF8732602814F00047C0C /* KantoLaunchScreenViewController.swift in Sources */,
+				FDEFF9202602E88000047C0C /* KantoNavigationController.swift in Sources */,
+				FD3B466B2602F0A200471D07 /* Router.swift in Sources */,
+				FD3B468A2602F3A800471D07 /* KantoEditProfileBuilder.swift in Sources */,
+				FD3B469D2602F4C800471D07 /* KantoEditProfileViewModel.swift in Sources */,
 				FDEFF7EB2602350200047C0C /* ApiService.swift in Sources */,
+				FD3B46822602F2DB00471D07 /* KantoProfileViewModel.swift in Sources */,
+				FD3B46612602F06800471D07 /* ViewModel.swift in Sources */,
 				FD7BA57326016F7C007A509D /* KantoProfileViewController.swift in Sources */,
+				FD3B46952602F43500471D07 /* KantoEditProfileRouter.swift in Sources */,
 				FDEFF8522602415100047C0C /* String+NonDigits.swift in Sources */,
+				FD3B46572602F01E00471D07 /* Builder.swift in Sources */,
 				FD7BA56F26016F7C007A509D /* AppDelegate.swift in Sources */,
-				FD7BA57126016F7C007A509D /* SceneDelegate.swift in Sources */,
 				FDEFF83326023CB000047C0C /* Error+Code.swift in Sources */,
+				FD3B46702602F17600471D07 /* KantoProfileRouter.swift in Sources */,
 				FDEFF84D2602403900047C0C /* ApiRequest.swift in Sources */,
+				FDEFF9252602E8B100047C0C /* UIFont+Helpers.swift in Sources */,
 				FDEFF7FB260237B600047C0C /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

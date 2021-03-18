@@ -8,6 +8,7 @@
 import UIKit
 
 class ApplicationCoordinator {
+    
     private let apiService = ApiService()
     private let keyValueStorage = KeychainHelper()
     lazy var persistenceController: PersistenceController = {
@@ -18,15 +19,15 @@ class ApplicationCoordinator {
                 persistenceController: persistenceController)
     }()
     
-    func initialize(on window: UIWindow, _ application: UIApplication, and launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+    func initialize(on window: UIWindow) {
         startApplication(on: window)
     }
 }
 
 extension ApplicationCoordinator {
+    
     func startApplication(on window: UIWindow) {
-        //let navigationController = TodoPagoNavigationController.navigationController()
-        let navigationController = UINavigationController()
+        let navigationController = KantoNavigationController.navigationController()
         let launchScreen = KantoLaunchScreenViewController.instantiate(from: .launchScreen)
         window.rootViewController = navigationController
         let dispatchGroup = DispatchGroup()
@@ -36,7 +37,6 @@ extension ApplicationCoordinator {
             dispatchGroup.leave()
         }
         navigationController.viewControllers = [launchScreen]
-        dispatchGroup.enter()
         dispatchGroup.notify(queue: .main) {
             self.startProfileFlow(on: navigationController)
         }
