@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var launchScreenView: UIView?
-    let coordinator = ApplicationCoordinator()
+    let coordinator = AppCoordinator()
     
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions

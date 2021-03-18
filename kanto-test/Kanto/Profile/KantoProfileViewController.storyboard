@@ -1,32 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Evz-c0-7VL">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iyK-ft-PTw">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Kanto Profile View Controller-->
-        <scene sceneID="HVd-f2-gDY">
+        <scene sceneID="uLG-lL-niU">
             <objects>
-                <viewController storyboardIdentifier="KantoProfileViewController" id="Evz-c0-7VL" customClass="KantoProfileViewController" customModule="kanto_test" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hdQ-92-VAJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController storyboardIdentifier="KantoProfileViewController" id="iyK-ft-PTw" customClass="KantoProfileViewController" customModule="kanto_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pv2-MI-vGA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="HT5-da-pys"/>
-                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="hUw-hU-qKL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5l5-GH-ARS">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="360"/>
+                                        <color key="backgroundColor" name="MajorelleBlue"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="360" id="NEQ-Zn-fGN"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iP1-zb-S1B">
+                                        <rect key="frame" x="0.0" y="392" width="375" height="275"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5l5-GH-ARS" firstAttribute="leading" secondItem="hUw-hU-qKL" secondAttribute="leading" id="086-JU-yKg"/>
+                                    <constraint firstItem="iP1-zb-S1B" firstAttribute="leading" secondItem="hUw-hU-qKL" secondAttribute="leading" id="AJQ-az-fJb"/>
+                                    <constraint firstAttribute="trailing" secondItem="5l5-GH-ARS" secondAttribute="trailing" id="W4E-A1-Dgj"/>
+                                    <constraint firstAttribute="trailing" secondItem="iP1-zb-S1B" secondAttribute="trailing" id="m0U-ng-rJ7"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bh6-Ot-vHg">
+                                <rect key="frame" x="327" y="0.0" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="ZDV-XN-7GD"/>
+                                    <constraint firstAttribute="height" constant="24" id="edk-RV-ZRy"/>
+                                </constraints>
+                                <state key="normal" image="gear"/>
+                            </button>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TLw-Zo-gtC">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="7Dl-A1-PgR"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="MnY-lg-pNQ"/>
+                                    <tabBarItem title="Item" id="ovW-sB-hl4"/>
+                                    <tabBarItem title="Item" id="UQu-gO-vTi"/>
+                                    <tabBarItem title="Item" id="Dth-uS-Vl5"/>
+                                    <tabBarItem systemItem="more" id="8fH-y7-6xB"/>
+                                </items>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedImageTintColor" name="MajorelleBlue"/>
+                            </tabBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f4F-8c-kOs"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f4F-8c-kOs" firstAttribute="leading" secondItem="hUw-hU-qKL" secondAttribute="leading" id="4sp-xa-bPN"/>
+                            <constraint firstAttribute="bottom" secondItem="TLw-Zo-gtC" secondAttribute="bottom" id="9Ue-Qu-lyy"/>
+                            <constraint firstItem="bh6-Ot-vHg" firstAttribute="top" secondItem="f4F-8c-kOs" secondAttribute="top" id="AS6-n5-zla"/>
+                            <constraint firstAttribute="trailing" secondItem="bh6-Ot-vHg" secondAttribute="trailing" constant="24" id="Aub-gx-rUv"/>
+                            <constraint firstItem="hUw-hU-qKL" firstAttribute="top" secondItem="pv2-MI-vGA" secondAttribute="top" id="S48-pU-pgd"/>
+                            <constraint firstItem="f4F-8c-kOs" firstAttribute="trailing" secondItem="hUw-hU-qKL" secondAttribute="trailing" id="ZrB-c1-q78"/>
+                            <constraint firstItem="TLw-Zo-gtC" firstAttribute="centerX" secondItem="f4F-8c-kOs" secondAttribute="centerX" id="f95-CX-fVt"/>
+                            <constraint firstItem="TLw-Zo-gtC" firstAttribute="leading" secondItem="hUw-hU-qKL" secondAttribute="leading" id="iwJ-0C-4il"/>
+                            <constraint firstItem="f4F-8c-kOs" firstAttribute="bottom" secondItem="hUw-hU-qKL" secondAttribute="bottom" id="lcS-Aw-PNG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gearButton" destination="bh6-Ot-vHg" id="MkQ-wv-3qk"/>
+                        <outlet property="panelHeightConstraint" destination="NEQ-Zn-fGN" id="fyo-OI-BxR"/>
+                        <outlet property="tableView" destination="iP1-zb-S1B" id="ITk-Cb-x6F"/>
+                        <outlet property="userDataPanelView" destination="5l5-GH-ARS" id="rgO-kM-BLw"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mkB-c8-SUP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4c2-fa-PJC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="191" y="93"/>
+            <point key="canvasLocation" x="134.78260869565219" y="142.63392857142856"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="gear" width="384" height="385"/>
+        <namedColor name="MajorelleBlue">
+            <color red="0.37647058823529411" green="0.31372549019607843" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

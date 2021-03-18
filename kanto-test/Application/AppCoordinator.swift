@@ -1,5 +1,5 @@
 //
-//  ApplicationCoordinator.swift
+//  AppCoordinator.swift
 //  kanto-test
 //
 //  Created by Hugo Jovan Ramírez Cerón on 16/03/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ApplicationCoordinator {
+class AppCoordinator {
     
     private let apiService = ApiService()
     private let keyValueStorage = KeychainHelper()
@@ -24,7 +24,7 @@ class ApplicationCoordinator {
     }
 }
 
-extension ApplicationCoordinator {
+extension AppCoordinator {
     
     func startApplication(on window: UIWindow) {
         let navigationController = KantoNavigationController.navigationController()
@@ -43,12 +43,11 @@ extension ApplicationCoordinator {
     }
 }
 
-private extension ApplicationCoordinator {
+private extension AppCoordinator {
     
     func startProfileFlow(on navigationController: UINavigationController) {
-//        let dashboardComercioBuilder = DashboardComercioBuilder.build(with: DashboardComercioViewModelDataSource(context: context))
-//        let viewcontrollers = [dashboardComercioBuilder, navigationController.viewControllers.last!]
-//        navigationController.viewControllers = viewcontrollers
-//        navigationController.popViewController(animated: false)
+        let profileViewController = KantoProfileBuilder.build(with: KantoProfileViewModelDataSource(context: context))
+        navigationController.viewControllers = [profileViewController, navigationController.viewControllers.last!]
+        navigationController.popViewController(animated: false)
     }
 }
