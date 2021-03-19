@@ -10,24 +10,6 @@ import Foundation
 
 extension ApiService {
     
-    func getImage(named imageName: String, completion: @escaping (UIImage?, String) -> Void) {
-        let cache = URLCache.shared
-        let imageResource = ImageResource(imageName: imageName)
-        if let response = cache.cachedResponse(for: imageResource.urlRequest), let image = UIImage(data: response.data) {
-            completion(image, imageName)
-        } else {
-            let request = ApiRequest(resource: imageResource)
-            request.load { (result) in
-                switch result {
-                case .success(let image):
-                    completion(image, imageName)
-                case .failure:
-                    completion(nil, imageName)
-                }
-            }
-        }
-    }
-    
     func getImage(fromURL url: URL, completion: @escaping (UIImage?, URL) -> Void) {
         let cache = URLCache.shared
         let request = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 30)

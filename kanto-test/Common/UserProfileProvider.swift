@@ -5,7 +5,7 @@
 //  Created by Hugo Jovan Ramírez Cerón on 16/03/21.
 //
 
-import Foundation
+import UIKit
 import Bond
 
 enum UserProfileProviderError: Error {
@@ -59,6 +59,19 @@ class UserProfileProvider {
             case .failure(let error):
                 completion(.failure(error))
             }
+        }
+    }
+    
+    func getImage(url: String, completion: @escaping(Result<UIImage, Error>) -> Void) {
+        guard let imageURL = URL(string: url) else {
+            return
+        }
+        apiService.getImage(fromURL: imageURL) { (image, _) in
+            guard let imageResult = image else {
+                completion(.failure(NetworkError.nilData))
+                return
+            }
+            completion(.success(imageResult))
         }
     }
 }

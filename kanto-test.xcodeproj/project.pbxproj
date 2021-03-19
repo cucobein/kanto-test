@@ -50,7 +50,6 @@
 		FDEFF80926023A7000047C0C /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF80826023A7000047C0C /* KeychainHelper.swift */; };
 		FDEFF80F26023ADE00047C0C /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF80E26023ADE00047C0C /* Context.swift */; };
 		FDEFF81926023BA500047C0C /* ApiService+CDN.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF81826023BA500047C0C /* ApiService+CDN.swift */; };
-		FDEFF82226023BD800047C0C /* ImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF82126023BD800047C0C /* ImageResource.swift */; };
 		FDEFF82726023BFF00047C0C /* ApiResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF82626023BFF00047C0C /* ApiResource.swift */; };
 		FDEFF82D26023C3700047C0C /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF82C26023C3700047C0C /* NetworkRequest.swift */; };
 		FDEFF83326023CB000047C0C /* Error+Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF83226023CB000047C0C /* Error+Code.swift */; };
@@ -145,7 +144,6 @@
 		FDEFF80826023A7000047C0C /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		FDEFF80E26023ADE00047C0C /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 		FDEFF81826023BA500047C0C /* ApiService+CDN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiService+CDN.swift"; sourceTree = "<group>"; };
-		FDEFF82126023BD800047C0C /* ImageResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResource.swift; sourceTree = "<group>"; };
 		FDEFF82626023BFF00047C0C /* ApiResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResource.swift; sourceTree = "<group>"; };
 		FDEFF82C26023C3700047C0C /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		FDEFF83226023CB000047C0C /* Error+Code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Code.swift"; sourceTree = "<group>"; };
@@ -353,7 +351,6 @@
 		FDEFF81D26023BC300047C0C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FDEFF82126023BD800047C0C /* ImageResource.swift */,
 				FDEFF82626023BFF00047C0C /* ApiResource.swift */,
 				FD9AD9862603C132004AE342 /* UserDataResource.swift */,
 				FD9AD9AA2603F3CE004AE342 /* VideosResource.swift */,
@@ -790,7 +787,6 @@
 				FD9AD99B2603C507004AE342 /* ApiService+UserData.swift in Sources */,
 				FDEFF886260282AA00047C0C /* StoryboardInstantiable.swift in Sources */,
 				FDEFF80F26023ADE00047C0C /* Context.swift in Sources */,
-				FDEFF82226023BD800047C0C /* ImageResource.swift in Sources */,
 				FDEFF82726023BFF00047C0C /* ApiResource.swift in Sources */,
 				FDEFF7F62602360B00047C0C /* KeyValueStorage.swift in Sources */,
 				FDEFF8732602814F00047C0C /* KantoLaunchScreenViewController.swift in Sources */,

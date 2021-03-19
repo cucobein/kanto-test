@@ -25,9 +25,13 @@ final class KantoProfileUserDataView: XibView {
     @IBOutlet private weak var viewsLabel: UILabel!
     
     private var dataSource: KantoProfileUserDataSource!
+    private var imageProvider: UserProfileProvider!
+    private var userData: UserData!
     
     func configure(with dataSource: KantoProfileUserDataSource) {
         self.dataSource = dataSource
+        self.imageProvider = dataSource.context.userProfileProvider
+        self.userData = dataSource.userData
         
         nameLabel.text = dataSource.userData.name
         usernameLabel.text = dataSource.userData.userName
@@ -35,5 +39,14 @@ final class KantoProfileUserDataView: XibView {
         followersLabel.text = String(dataSource.userData.followers ?? 0)
         followedLabel.text = String(dataSource.userData.followed ?? 0)
         viewsLabel.text = String(dataSource.userData.views ?? 0)
+        
+        if let profilePicture = userData.profilePicture {
+            self.imageProvider.getImage(url: profilePicture) { result in
+                switch result {
+                case .success(let image): self.profilePictureImageView.image = image
+                case .failure: ()
+                }
+            }
+        }
     }
 }
