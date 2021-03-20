@@ -27,6 +27,11 @@ final class KantoProfileViewModel: ViewModelProtocol {
         self.userProfileProvider = dataSource.context.userProfileProvider
         fetchData()
     }
+    
+    func playVideoOnCell(index: Int) {
+        videos.value.collection.forEach { $0.isPlaying.value = false }
+        videos.value.collection[index].isPlaying.value = true
+    }
 }
 
 private extension KantoProfileViewModel {

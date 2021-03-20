@@ -38,37 +38,17 @@ class KantoProfileViewController: UIViewController, ViewControllerProtocol {
 private extension KantoProfileViewController {
     
     func bindViews() {
-        
         _ = gearButton.reactive.controlEvents(.touchUpInside).observeNext { [weak self] in
             guard let self = self else { return }
-            if self.userPanelState == .shown {
-                self.removeUserDataPanel()
-                UIView.animate(withDuration: 0.5) {
-                    self.panelHeightConstraint.constant = 40
-                    self.userDataPanelView.alpha = 0
-                    self.userPanelState = .hidden
-                    self.view.layoutIfNeeded()
-                }
-            } else {
-                UIView.animate(withDuration: 0.5, animations: {
-                    self.panelHeightConstraint.constant = 340
-                    self.userDataPanelView.alpha = 1
-                    self.userPanelState = .shown
-                    self.view.layoutIfNeeded()
-                }, completion: { _ in
-                    self.addUserDataPanel()
-                })
-            }
+            self.userPanelState == .shown ?
+                self.hidePanel() : self.showPanel()
         }
         
         _ = viewModel.userData.observeNext { [weak self] in
             guard let self = self,
                   let data = $0 else { return }
-            if let userDataView = self.userDataView {
-                userDataView.configure(with: data)
-            } else {
-                self.addUserDataPanel()
-            }
+            self.userDataView != nil ?
+                self.userDataView?.configure(with: data) : self.addUserDataPanel()
         }
         
         viewModel.videos.bind(to: tableView, cellType: KantoVideoCell.self) { $0.configure(with: $1) }
@@ -90,6 +70,48 @@ private extension KantoProfileViewController {
         if let userDataView = userDataView {
             userDataView.removeFromSuperview()
             self.userDataView = nil
+        }
+    }
+    
+    func hidePanel() {
+        self.userPanelState = .hidden
+        self.removeUserDataPanel()
+        UIView.animate(withDuration: 0.5) {
+            self.panelHeightConstraint.constant = 40
+            self.userDataPanelView.alpha = 0
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    func showPanel() {
+        self.userPanelState = .shown
+        UIView.animate(withDuration: 0.5, animations: {
+            self.panelHeightConstraint.constant = 340
+            self.userDataPanelView.alpha = 1
+            self.view.layoutIfNeeded()
+        }, completion: { _ in
+            self.addUserDataPanel()
+        })
+    }
+}
+
+extension KantoProfileViewController: UITableViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if userPanelState == .shown { hidePanel() }
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let center = CGPoint(x: self.tableView.bounds.width / 2.0,
+                             y: self.tableView.bounds.height / 2.0)
+        var centerCell = tableView.visibleCells[0]
+        for cell in tableView.visibleCells {
+            let centerCellDiff = abs(centerCell.center.y - center.y - tableView.contentOffset.y)
+            let cellDiff = abs(cell.center.y - center.y - tableView.contentOffset.y)
+            if cellDiff < centerCellDiff { centerCell = cell }
+        }
+        if let centerCellIndexPath = tableView.indexPath(for: centerCell) {
+            viewModel.playVideoOnCell(index: centerCellIndexPath.row)
         }
     }
 }
