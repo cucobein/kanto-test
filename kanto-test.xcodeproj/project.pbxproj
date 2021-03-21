@@ -41,6 +41,7 @@
 		FD9AD9962603C27F004AE342 /* URLRequest+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9AD9952603C27F004AE342 /* URLRequest+Helpers.swift */; };
 		FD9AD99B2603C507004AE342 /* ApiService+UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9AD99A2603C507004AE342 /* ApiService+UserData.swift */; };
 		FD9AD9AB2603F3CE004AE342 /* VideosResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9AD9AA2603F3CE004AE342 /* VideosResource.swift */; };
+		FD9AD9B72606D72D004AE342 /* UIImageView+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9AD9B62606D72D004AE342 /* UIImageView+Rounded.swift */; };
 		FDEFF7E12602333C00047C0C /* KantoEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF7E02602333C00047C0C /* KantoEditProfileViewController.swift */; };
 		FDEFF7E6260233F500047C0C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF7E5260233F500047C0C /* AppCoordinator.swift */; };
 		FDEFF7EB2602350200047C0C /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFF7EA2602350200047C0C /* ApiService.swift */; };
@@ -135,6 +136,7 @@
 		FD9AD9952603C27F004AE342 /* URLRequest+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Helpers.swift"; sourceTree = "<group>"; };
 		FD9AD99A2603C507004AE342 /* ApiService+UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiService+UserData.swift"; sourceTree = "<group>"; };
 		FD9AD9AA2603F3CE004AE342 /* VideosResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosResource.swift; sourceTree = "<group>"; };
+		FD9AD9B62606D72D004AE342 /* UIImageView+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Rounded.swift"; sourceTree = "<group>"; };
 		FDEFF7E02602333C00047C0C /* KantoEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantoEditProfileViewController.swift; sourceTree = "<group>"; };
 		FDEFF7E5260233F500047C0C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FDEFF7EA2602350200047C0C /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
@@ -380,6 +382,7 @@
 				FDEFF8932602B4BE00047C0C /* UIView+Autolayout.swift */,
 				FDEFF9242602E8B100047C0C /* UIFont+Helpers.swift */,
 				FD9AD9952603C27F004AE342 /* URLRequest+Helpers.swift */,
+				FD9AD9B62606D72D004AE342 /* UIImageView+Rounded.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -792,6 +795,7 @@
 				FDEFF8732602814F00047C0C /* KantoLaunchScreenViewController.swift in Sources */,
 				FD9AD9912603C21B004AE342 /* HTTPMethod.swift in Sources */,
 				FDEFF9202602E88000047C0C /* KantoNavigationController.swift in Sources */,
+				FD9AD9B72606D72D004AE342 /* UIImageView+Rounded.swift in Sources */,
 				FD3B46B32603201300471D07 /* XibView.swift in Sources */,
 				FD3B466B2602F0A200471D07 /* Router.swift in Sources */,
 				FD3B468A2602F3A800471D07 /* KantoEditProfileBuilder.swift in Sources */,

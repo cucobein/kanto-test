@@ -43,7 +43,9 @@ final class KantoProfileUserDataView: XibView {
         if let profilePicture = userData.profilePicture {
             self.imageProvider.getImage(url: profilePicture) { result in
                 switch result {
-                case .success(let image): self.profilePictureImageView.image = image
+                case .success(let image):
+                    self.profilePictureImageView.image = image
+                    self.profilePictureImageView.makeRounded()
                 case .failure: ()
                 }
             }
