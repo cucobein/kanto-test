@@ -69,9 +69,24 @@ class PersistenceController {
         }
     }
     
-    func updateUserProfileWith(userProfile: UserProfile) {
+    func updateUserProfileWith(name: String, username: String, bio: String, selectedImage: Data?) {
+        guard let currentUser = userProfile.value else { return }
+        let userProfile = UserProfile()
+        userProfile.name = name
+        userProfile.userName = username
+        userProfile.profilePicture = currentUser.profilePicture
+        userProfile.biography = bio
+        userProfile.followers = currentUser.followers
+        userProfile.followed = currentUser.followed
+        userProfile.views = currentUser.views
+        userProfile.selectedImageData = selectedImage
         do {
-            try database.write {  }
+            
+            try database.write {
+                database.delete(database.objects(UserProfile.self))
+                database.add(userProfile)
+            }
+            self.userProfile.value = userProfile
         } catch {
             fatalError("Unable to save in database: \(error)")
         }

@@ -16,13 +16,14 @@ final class InputRow: XibView {
     
     private var viewModel: InputRowViewModel!
     var shouldChange = true
-    var options: [String]?
+    var selectedOption = Observable<String?>(nil)
 
     func configure(for viewModel: InputRowViewModel) {
         self.viewModel = viewModel
         titleLabel.text = viewModel.title
         inputTextField.placeholder = viewModel.placeHolderText
         inputTextField.keyboardType = viewModel.inputType
+        self.selectedOption = viewModel.selectedOption
         inputTextField.delegate = self
         errorLabel.text = viewModel.showableError
         errorLabel.isHidden = true
@@ -31,6 +32,16 @@ final class InputRow: XibView {
                                                       green: 1,
                                                       blue: 1,
                                                       alpha: 0.5))
+        bindView()
+    }
+    
+    private func bindView() {
+        viewModel.selectedOption.bidirectionalBind(to: inputTextField.reactive.text)
+        
+        _ = selectedOption.observeNext {
+            self.error(visible: false)
+            self.shouldChange = ($0 ?? "").count < self.viewModel.maxCharCount
+        }
     }
     
     func error(visible: Bool) {
@@ -43,6 +54,11 @@ final class InputRow: XibView {
                                                           alpha: 0.5))
         }
         errorLabel.isHidden = !visible
+    }
+    
+    override func endEditing(_ force: Bool) -> Bool {
+        super.endEditing(force)
+        return inputTextField.endEditing(force)
     }
 }
 

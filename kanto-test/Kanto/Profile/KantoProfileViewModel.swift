@@ -43,11 +43,9 @@ private extension KantoProfileViewModel {
     func fetchData() {
         userProfileProvider.fetchUserDataProfile { [unowned self] (result) in
             switch result {
-            case .success(let userProfile):
-                guard let userProfile = userProfile else { return }
+            case .success:
                 let editDataSource = KantoEditProfileViewModelDataSource(context: self.dataSource.context)
                 self.userData.value = KantoProfileUserDataSource(context: self.dataSource.context,
-                                                                 userProfile: userProfile,
                                                                  editButtonHandler: {
                                                                     self.router.routeToEditProfile(with: editDataSource)
                                                                  })

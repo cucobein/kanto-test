@@ -26,6 +26,7 @@ class UserProfileProvider {
             self?.userProfile.value = $0
         }
     }
+    
     func fetchUserDataProfile(completion: @escaping(Result<UserProfile?, Error>) -> Void) {
         apiService.getUserData { result in
             switch result {
@@ -63,8 +64,11 @@ class UserProfileProvider {
         }
     }
     
-    func updateUserProfileWith(userProfile: UserProfile) {
-        persistenceController.updateUserProfileWith(userProfile: userProfile)
+    func updateUserProfileWith(name: String, username: String, bio: String, selectedImage: Data?) {
+        persistenceController.updateUserProfileWith(name: name,
+                                                    username: username,
+                                                    bio: bio,
+                                                    selectedImage: selectedImage)
     }
     
     func toggleUserVideoLikes(with userVideo: UserVideo) {

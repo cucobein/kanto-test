@@ -12,6 +12,7 @@ struct InputRowViewModel {
     
     let title: String
     let placeHolderText: String
+    let selectedOption: Observable<String?>
     var inputType: UIKeyboardType = .default
     var showableError = ""
     var maxCharCount = 256
