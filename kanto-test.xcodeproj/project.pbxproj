@@ -28,6 +28,7 @@
 		FD3B46C62603892700471D07 /* KantoVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD3B46C52603892700471D07 /* KantoVideoCell.xib */; };
 		FD4D27CF2607B5E700A3F0F0 /* InputRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD4D27CE2607B5E700A3F0F0 /* InputRow.xib */; };
 		FD4D27DD2607BFF300A3F0F0 /* UITextField+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4D27DC2607BFF300A3F0F0 /* UITextField+Helpers.swift */; };
+		FD4D28052607F79D00A3F0F0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FD4D28042607F79D00A3F0F0 /* README.md */; };
 		FD7BA56F26016F7C007A509D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BA56E26016F7C007A509D /* AppDelegate.swift */; };
 		FD7BA57326016F7C007A509D /* KantoProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7BA57226016F7C007A509D /* KantoProfileViewController.swift */; };
 		FD7BA57826016F7E007A509D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD7BA57726016F7E007A509D /* Assets.xcassets */; };
@@ -119,6 +120,7 @@
 		FD3B46C52603892700471D07 /* KantoVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KantoVideoCell.xib; sourceTree = "<group>"; };
 		FD4D27CE2607B5E700A3F0F0 /* InputRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputRow.xib; sourceTree = "<group>"; };
 		FD4D27DC2607BFF300A3F0F0 /* UITextField+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Helpers.swift"; sourceTree = "<group>"; };
+		FD4D28042607F79D00A3F0F0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FD7BA56B26016F7C007A509D /* kanto-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kanto-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD7BA56E26016F7C007A509D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD7BA57226016F7C007A509D /* KantoProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantoProfileViewController.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 		FD7BA56226016F7C007A509D = {
 			isa = PBXGroup;
 			children = (
+				FD4D28042607F79D00A3F0F0 /* README.md */,
 				FD7BA56D26016F7C007A509D /* kanto-test */,
 				FD7BA56C26016F7C007A509D /* Products */,
 			);
@@ -604,6 +607,7 @@
 				FDEFF8D32602CE2200047C0C /* Animosa-ExtraBold.ttf in Resources */,
 				FD3B46C62603892700471D07 /* KantoVideoCell.xib in Resources */,
 				FD3B46782602F1F900471D07 /* KantoProfileViewController.storyboard in Resources */,
+				FD4D28052607F79D00A3F0F0 /* README.md in Resources */,
 				FD7BA57826016F7E007A509D /* Assets.xcassets in Resources */,
 				FDEFF8D22602CE2200047C0C /* Animosa-Bold.ttf in Resources */,
 			);
@@ -858,14 +862,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "kanto-test/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "cucobein.kanto-test";
+				PRODUCT_BUNDLE_IDENTIFIER = cucobein.ktest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -876,14 +883,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "kanto-test/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "cucobein.kanto-test";
+				PRODUCT_BUNDLE_IDENTIFIER = cucobein.ktest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
