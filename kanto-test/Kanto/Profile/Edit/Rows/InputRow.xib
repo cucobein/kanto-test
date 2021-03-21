@@ -3,12 +3,12 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Nunito-Regular.ttf">
-            <string>Nunito-Regular</string>
+        <array key="Animosa-Regular.ttf">
+            <string>Animosa-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -16,78 +16,62 @@
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="OT0-Gs-ZZc"/>
                 <outlet property="errorLabel" destination="eYb-Md-1ZJ" id="99J-7V-8DD"/>
-                <outlet property="inputLabel" destination="RFh-Ud-46E" id="WH4-ok-egV"/>
                 <outlet property="inputTextField" destination="Hqd-wP-X1t" id="HP4-21-kCH"/>
                 <outlet property="titleLabel" destination="91T-GC-Fhi" id="tlu-F9-mta"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="163"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de fantasía" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91T-GC-Fhi">
-                    <rect key="frame" x="0.0" y="7" width="140.5" height="24"/>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title title title title title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91T-GC-Fhi">
+                    <rect key="frame" x="0.0" y="7" width="141.5" height="24"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="wO9-ue-TwQ"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
-                    <color key="textColor" name="TodoPagoMagenta"/>
+                    <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hqd-wP-X1t" customClass="CustomUITextField" customModule="kanto_test" customModuleProvider="target">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hqd-wP-X1t">
                     <rect key="frame" x="0.0" y="40" width="375" height="34"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="YiG-2W-vhq"/>
                     </constraints>
-                    <color key="textColor" name="Gray6"/>
-                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="18"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFh-Ud-46E">
-                    <rect key="frame" x="0.0" y="40" width="375" height="34"/>
-                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
-                    <color key="textColor" name="Gray6"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola este es un texto super largo para probar que pasa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYb-Md-1ZJ">
-                    <rect key="frame" x="0.0" y="75" width="375" height="14"/>
-                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="12"/>
-                    <color key="textColor" name="TodoPagoRed"/>
+                    <rect key="frame" x="0.0" y="75" width="375" height="17"/>
+                    <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="14"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Hqd-wP-X1t" firstAttribute="top" secondItem="91T-GC-Fhi" secondAttribute="bottom" constant="9" id="0we-gx-Ptq"/>
                 <constraint firstItem="Hqd-wP-X1t" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2N9-Aa-hhD"/>
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Hqd-wP-X1t" secondAttribute="bottom" constant="20" id="529-PC-fIO"/>
                 <constraint firstItem="eYb-Md-1ZJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BsC-T3-6Zb"/>
-                <constraint firstItem="RFh-Ud-46E" firstAttribute="top" secondItem="91T-GC-Fhi" secondAttribute="bottom" constant="9" id="JRc-st-4oH"/>
                 <constraint firstItem="91T-GC-Fhi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="LgK-i6-CAN"/>
                 <constraint firstAttribute="trailing" secondItem="Hqd-wP-X1t" secondAttribute="trailing" id="M6R-Et-v5m"/>
                 <constraint firstItem="eYb-Md-1ZJ" firstAttribute="top" secondItem="Hqd-wP-X1t" secondAttribute="bottom" constant="1" id="T4L-aM-Goe"/>
-                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="RFh-Ud-46E" secondAttribute="bottom" constant="20" id="Xpy-a0-gLG"/>
                 <constraint firstAttribute="bottom" secondItem="eYb-Md-1ZJ" secondAttribute="bottom" priority="1" id="ZoX-kT-ofW"/>
                 <constraint firstAttribute="trailing" secondItem="eYb-Md-1ZJ" secondAttribute="trailing" id="h5o-Bx-ia4"/>
                 <constraint firstItem="91T-GC-Fhi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mhk-sg-hKF"/>
-                <constraint firstItem="RFh-Ud-46E" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uOL-rL-inW"/>
-                <constraint firstAttribute="trailing" secondItem="RFh-Ud-46E" secondAttribute="trailing" id="vEM-rM-yp6"/>
-                <constraint firstItem="eYb-Md-1ZJ" firstAttribute="top" secondItem="RFh-Ud-46E" secondAttribute="bottom" constant="1" id="z7L-wV-mPG"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="234.05797101449278" y="76.004464285714278"/>
         </view>
     </objects>
     <resources>
-        <namedColor name="Gray6">
-            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="TodoPagoMagenta">
-            <color red="0.85500001907348633" green="0.086000002920627594" blue="0.48199999332427979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="TodoPagoRed">
-            <color red="0.98431372549019602" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

@@ -14,6 +14,7 @@ class KantoEditProfileViewController: UIViewController, ViewControllerProtocol {
     @IBOutlet private weak var profileImageView: UIImageView!
     @IBOutlet private weak var galleryButton: UIButton!
     @IBOutlet private weak var cameraButton: UIButton!
+    @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private weak var contentStackView: UIStackView!
     
     private var viewModel: KantoEditProfileViewModel!
@@ -37,17 +38,41 @@ private extension KantoEditProfileViewController {
     }
     
     func loadInputs() {
-        let streetNameRow = InputRow()
-        let streetViewModel = InputRowViewModel(title: "Calle",
-                                                placeHolderText: "Calle",
-                                                showableError: "Ingresa el campo",
-                                                maxCharCount: 50)
-//        streetNameViewModel.neededHeightForDisplay.bind(to: viewModel.minHeightNeeded)
-//        _ = viewModel.showStreetError.observeNext { (show) in
-//            streetNameRow.error(visible: show)
-//        }
-        streetNameRow.configure(for: streetViewModel)
-        contentStackView.addArrangedSubview(streetNameRow)
+        let nameRow = InputRow()
+        let nameViewModel = InputRowViewModel(title: "Name",
+                                              placeHolderText: "Name",
+                                              showableError: "Ingresa el valor del nombre",
+                                              maxCharCount: 24)
+        nameViewModel.neededHeightForDisplay.bind(to: viewModel.minHeightNeeded)
+        _ = viewModel.showNameError.observeNext { (show) in
+            nameRow.error(visible: show)
+        }
+        nameRow.configure(for: nameViewModel)
+        contentStackView.addArrangedSubview(nameRow)
+
+        let usernameRow = InputRow()
+        let usernameViewModel = InputRowViewModel(title: "Username",
+                                              placeHolderText: "Username",
+                                              showableError: "Ingresa el valor del username",
+                                              maxCharCount: 24)
+        usernameViewModel.neededHeightForDisplay.bind(to: viewModel.minHeightNeeded)
+        _ = viewModel.showNameError.observeNext { (show) in
+            usernameRow.error(visible: show)
+        }
+        usernameRow.configure(for: usernameViewModel)
+        contentStackView.addArrangedSubview(usernameRow)
+        
+        let bioRow = InputRow()
+        let bioViewModel = InputRowViewModel(title: "Biography",
+                                              placeHolderText: "Biography",
+                                              showableError: "Ingresa el valor del bio",
+                                              maxCharCount: 32)
+        bioViewModel.neededHeightForDisplay.bind(to: viewModel.minHeightNeeded)
+        _ = viewModel.showNameError.observeNext { (show) in
+            bioRow.error(visible: show)
+        }
+        bioRow.configure(for: bioViewModel)
+        contentStackView.addArrangedSubview(bioRow)
     }
     
     func bindViews() {

@@ -18,6 +18,8 @@ final class KantoEditProfileViewModel: ViewModelProtocol {
     private let dataSource: KantoEditProfileViewModelDataSource
     private let userProfileProvider: UserProfileProvider
     private let router: KantoEditProfileRouter
+    let minHeightNeeded = Observable<CGFloat>(0)
+    let showNameError = Observable<Bool>(false)
     let profileImage = Observable<UIImage?>(nil)
     
     init(dataSource: KantoEditProfileViewModelDataSource, router: KantoEditProfileRouter) {

@@ -15,8 +15,5 @@ struct InputRowViewModel {
     var inputType: UIKeyboardType = .default
     var showableError = ""
     var maxCharCount = 256
-    var isEditable = true
-    var canEditText = true
-    var canPasteText = true
     let neededHeightForDisplay = Observable<CGFloat>(0.0)
 }

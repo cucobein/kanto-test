@@ -12,7 +12,6 @@ final class InputRow: XibView {
 
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var inputTextField: UITextField!
-    @IBOutlet private weak var inputLabel: UILabel!
     @IBOutlet private weak var errorLabel: UILabel!
     
     private var viewModel: InputRowViewModel!
@@ -27,19 +26,22 @@ final class InputRow: XibView {
         inputTextField.delegate = self
         errorLabel.text = viewModel.showableError
         errorLabel.isHidden = true
-        inputTextField.isHidden = !viewModel.isEditable
-        inputLabel.isHidden = viewModel.isEditable
         inputTextField.autocorrectionType = .no
+        inputTextField.underlined(color: UIColor.init(red: 1,
+                                                      green: 1,
+                                                      blue: 1,
+                                                      alpha: 0.5))
     }
     
-    func setUpValidated(text: String) {
-        inputTextField.text = text
-    }
-
     func error(visible: Bool) {
-        inputTextField.layer.borderColor = visible ? UIColor.red.cgColor : UIColor.gray.cgColor
-        inputTextField.layer.borderWidth = visible ? 1 : 0
-        inputTextField.layer.cornerRadius = 5
+        if visible {
+            inputTextField.underlined(color: .red)
+        } else {
+            inputTextField.underlined(color: UIColor.init(red: 1,
+                                                          green: 1,
+                                                          blue: 1,
+                                                          alpha: 0.5))
+        }
         errorLabel.isHidden = !visible
     }
 }
@@ -50,6 +52,17 @@ extension InputRow: UITextFieldDelegate {
         guard let containerView = superview?.superview else { return }
         let convertedFrame = convert(bounds, to: containerView)
         self.viewModel.neededHeightForDisplay.value = convertedFrame.maxY
+        textField.underlined(color: UIColor.init(red: 0,
+                                                 green: 0.77,
+                                                 blue: 0.8,
+                                                 alpha: 1))
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.underlined(color: UIColor.init(red: 1,
+                                                 green: 1,
+                                                 blue: 1,
+                                                 alpha: 0.5))
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
