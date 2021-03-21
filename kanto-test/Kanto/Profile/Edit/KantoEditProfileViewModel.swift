@@ -79,7 +79,7 @@ final class KantoEditProfileViewModel: ViewModelProtocol {
         userProfileProvider.updateUserProfileWith(name: name,
                                                   username: username,
                                                   bio: bio,
-                                                  selectedImage: nil)
+                                                  selectedImage: imageData.value)
         return true
     }
 }

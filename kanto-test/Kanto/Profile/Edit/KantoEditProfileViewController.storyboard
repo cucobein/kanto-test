@@ -11,9 +11,6 @@
         <array key="Animosa-Bold.ttf">
             <string>Animosa-Bold</string>
         </array>
-        <array key="Animosa-ExtraBold.ttf">
-            <string>Animosa-ExtraBold</string>
-        </array>
         <array key="Animosa-Regular.ttf">
             <string>Animosa-Regular</string>
         </array>
@@ -73,58 +70,31 @@
                                                     <constraint firstAttribute="height" constant="80" id="zAu-DF-xRh"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change photo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhD-Ne-6QZ">
-                                                <rect key="frame" x="154" y="158" width="106.5" height="19"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P90-vc-dfK">
+                                                <rect key="frame" x="147" y="158" width="120" height="31"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="16"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="kkU-gA-5DQ" userLabel="Actions">
-                                                <rect key="frame" x="70.5" y="185" width="273" height="31"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CST-e1-pp6" userLabel="Gallery Button">
-                                                        <rect key="frame" x="0.0" y="0.0" width="107" height="31"/>
-                                                        <color key="backgroundColor" white="1" alpha="0.10251935744127691" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="Animosa-ExtraBold" family="Animosa" pointSize="16"/>
-                                                        <state key="normal" title="  From gallery  ">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elS-L5-rfE">
-                                                        <rect key="frame" x="131" y="5.5" width="5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xy4-HC-fL1" userLabel="Camera Button">
-                                                        <rect key="frame" x="160" y="0.0" width="113" height="31"/>
-                                                        <color key="backgroundColor" white="1" alpha="0.10251935744127691" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="Animosa-ExtraBold" family="Animosa" pointSize="16"/>
-                                                        <state key="normal" title="  From camera  ">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
+                                                <state key="normal" title="  Change photo  ">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eR9-dc-4uu">
-                                                <rect key="frame" x="16" y="232" width="382" height="664"/>
+                                                <rect key="frame" x="16" y="205" width="382" height="691"/>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="s7s-C7-tci" firstAttribute="centerX" secondItem="kiG-YY-3AO" secondAttribute="centerX" id="46e-Mr-UIa"/>
-                                            <constraint firstItem="kkU-gA-5DQ" firstAttribute="centerX" secondItem="kiG-YY-3AO" secondAttribute="centerX" id="9ET-0c-QpA"/>
+                                            <constraint firstItem="P90-vc-dfK" firstAttribute="centerX" secondItem="kiG-YY-3AO" secondAttribute="centerX" id="7d7-iN-yxM"/>
                                             <constraint firstAttribute="trailing" secondItem="Tum-L4-hiF" secondAttribute="trailing" constant="16" id="9rE-zc-GEZ"/>
                                             <constraint firstItem="Tum-L4-hiF" firstAttribute="top" secondItem="kiG-YY-3AO" secondAttribute="top" constant="16" id="BlC-Jd-5dp"/>
                                             <constraint firstAttribute="trailing" secondItem="eR9-dc-4uu" secondAttribute="trailing" constant="16" id="GKn-wX-aCm"/>
-                                            <constraint firstItem="HhD-Ne-6QZ" firstAttribute="top" secondItem="s7s-C7-tci" secondAttribute="bottom" constant="16" id="Qlg-69-AR8"/>
-                                            <constraint firstItem="eR9-dc-4uu" firstAttribute="top" secondItem="kkU-gA-5DQ" secondAttribute="bottom" constant="16" id="ULU-gn-pNA"/>
-                                            <constraint firstItem="kkU-gA-5DQ" firstAttribute="top" secondItem="HhD-Ne-6QZ" secondAttribute="bottom" constant="8" id="Zqx-rJ-alx"/>
                                             <constraint firstItem="eR9-dc-4uu" firstAttribute="leading" secondItem="kiG-YY-3AO" secondAttribute="leading" constant="16" id="bMg-tJ-xad"/>
                                             <constraint firstItem="s7s-C7-tci" firstAttribute="top" secondItem="Tum-L4-hiF" secondAttribute="bottom" constant="16" id="gwv-bo-rTD"/>
                                             <constraint firstItem="Tum-L4-hiF" firstAttribute="leading" secondItem="kiG-YY-3AO" secondAttribute="leading" constant="16" id="ip1-qL-Nvb"/>
+                                            <constraint firstItem="eR9-dc-4uu" firstAttribute="top" secondItem="P90-vc-dfK" secondAttribute="bottom" constant="16" id="mZR-FJ-xe6"/>
                                             <constraint firstAttribute="bottom" secondItem="eR9-dc-4uu" secondAttribute="bottom" placeholder="YES" id="uYL-Qv-TZr"/>
-                                            <constraint firstItem="HhD-Ne-6QZ" firstAttribute="centerX" secondItem="kiG-YY-3AO" secondAttribute="centerX" id="xzD-7b-0ev"/>
+                                            <constraint firstItem="P90-vc-dfK" firstAttribute="top" secondItem="s7s-C7-tci" secondAttribute="bottom" constant="16" id="zaa-4C-XxE"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -150,10 +120,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cameraButton" destination="CST-e1-pp6" id="LKC-Pn-GzX"/>
+                        <outlet property="changePhotoButton" destination="P90-vc-dfK" id="D5Z-FX-G26"/>
                         <outlet property="closeButton" destination="WPs-2R-EFq" id="2Ob-xI-4sx"/>
                         <outlet property="contentStackView" destination="eR9-dc-4uu" id="9FI-Oa-vY4"/>
-                        <outlet property="galleryButton" destination="CST-e1-pp6" id="6z6-py-2F9"/>
                         <outlet property="profileImageView" destination="s7s-C7-tci" id="Tvg-wb-ocV"/>
                         <outlet property="saveButton" destination="7dz-2r-Oga" id="gp6-Hu-VdR"/>
                         <outlet property="scrollView" destination="1a8-gS-uMn" id="KYn-Si-1XL"/>
