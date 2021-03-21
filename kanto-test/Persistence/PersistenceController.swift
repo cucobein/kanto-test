@@ -79,7 +79,12 @@ class PersistenceController {
         userProfile.followers = currentUser.followers
         userProfile.followed = currentUser.followed
         userProfile.views = currentUser.views
-        userProfile.selectedImageData = selectedImage
+        if selectedImage != nil {
+            userProfile.selectedImageData = selectedImage
+        } else {
+            userProfile.selectedImageData = currentUser.selectedImageData
+        }
+        
         do {
             
             try database.write {
