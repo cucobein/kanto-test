@@ -28,8 +28,12 @@ final class KantoProfileViewModel: ViewModelProtocol {
         fetchData()
     }
     
-    func playVideoOnCell(index: Int) {
+    func stopPlayingVideos() {
         videos.value.collection.forEach { $0.isPlaying.value = false }
+    }
+    
+    func playVideoOnCell(index: Int) {
+        stopPlayingVideos()
         videos.value.collection[index].isPlaying.value = true
     }
 }
@@ -40,10 +44,13 @@ private extension KantoProfileViewModel {
         userProfileProvider.fetchUserDataProfile { [unowned self] (result) in
             switch result {
             case .success(let userProfile):
-                if let userProfile = userProfile {
-                    self.userData.value = KantoProfileUserDataSource(context: self.dataSource.context,
-                                                                     userProfile: userProfile)
-                }
+                guard let userProfile = userProfile else { return }
+                let editDataSource = KantoEditProfileViewModelDataSource(context: self.dataSource.context)
+                self.userData.value = KantoProfileUserDataSource(context: self.dataSource.context,
+                                                                 userProfile: userProfile,
+                                                                 editButtonHandler: {
+                                                                    self.router.routeToEditProfile(with: editDataSource)
+                                                                 })
             case .failure: ()
             }
         }

@@ -11,6 +11,7 @@ struct KantoProfileUserDataSource: ViewModelDataSourceProtocol {
     
     var context: Context
     let userProfile: UserProfile
+    let editButtonHandler: () -> Void
 }
 
 final class KantoProfileUserDataView: XibView {
@@ -32,23 +33,44 @@ final class KantoProfileUserDataView: XibView {
         self.dataSource = dataSource
         self.imageProvider = dataSource.context.userProfileProvider
         self.userProfile = dataSource.userProfile
-        
-        nameLabel.text = dataSource.userProfile.name
-        usernameLabel.text = dataSource.userProfile.userName
-        biographyLabel.text = dataSource.userProfile.biography
-        followersLabel.text = String(dataSource.userProfile.followers)
-        followedLabel.text = String(dataSource.userProfile.followed)
-        viewsLabel.text = String(dataSource.userProfile.views)
-        
-        self.imageProvider.getImage(url: userProfile.profilePicture) { result in
-            switch result {
-            case .success(let image):
-                self.profilePictureImageView.image = image
-                self.profilePictureImageView.makeRounded()
-            case .failure: ()
-            }
-        }
-        
+        configureUI()
+        loadImage()
+        bindViews()
+    }
+}
+
+private extension KantoProfileUserDataView {
+    
+    func configureUI() {
+        nameLabel.text = userProfile.name
+        usernameLabel.text = userProfile.userName
+        biographyLabel.text = userProfile.biography
+        followersLabel.text = String(userProfile.followers)
+        followedLabel.text = String(userProfile.followed)
+        viewsLabel.text = String(userProfile.views)
         editProfileButton.makeRounded(cornerRadius: 8)
+    }
+    
+    func loadImage() {
+        guard let userImageData = userProfile.selectedImageData else {
+            self.imageProvider.getImage(url: userProfile.profilePicture) { result in
+                switch result {
+                case .success(let image):
+                    self.profilePictureImageView.image = image
+                    self.profilePictureImageView.makeRounded()
+                case .failure: ()
+                }
+            }
+            return
+        }
+        profilePictureImageView.image = UIImage(data: userImageData)
+        profilePictureImageView.makeRounded()
+    }
+   
+    func bindViews() {
+        _ = editProfileButton.reactive.controlEvents(.touchUpInside).observeNext { [weak self] in
+            guard let self = self else { return }
+            self.dataSource.editButtonHandler()
+        }
     }
 }

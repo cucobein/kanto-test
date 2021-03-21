@@ -8,10 +8,12 @@
 import UIKit
 
 enum NavigationBarStyle {
+    
     case clear
 }
 
 protocol ViewControllerNavigationStyle {
+    
     var navigationBarStyle: NavigationBarStyle { get }
 }
 

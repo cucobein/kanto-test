@@ -12,16 +12,6 @@ enum ApiServiceError: Error {
     case apiError(code: String?, name: String?, message: String)
 }
 
-extension ApiServiceError: LocalizedError {
-    
-    var errorDescription: String? {
-        switch self {
-        case .apiError(_, _, message: let message):
-            return message
-        }
-    }
-}
-
 protocol ApiServiceDelegate: class {
     
     func apiServiceDidRecieveUnauthorizedError(_ apiService: ApiService, retryHandler: @escaping () -> Void)

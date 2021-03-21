@@ -31,7 +31,6 @@ class KantoProfileViewController: UIViewController, ViewControllerProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViews()
-        addUserDataPanel()
     }
 }
 
@@ -88,6 +87,7 @@ private extension KantoProfileViewController {
     
     func showPanel() {
         self.userPanelState = .shown
+        viewModel.stopPlayingVideos()
         UIView.animate(withDuration: 0.5, animations: {
             self.panelHeightConstraint.constant = 340
             self.userDataPanelView.alpha = 1

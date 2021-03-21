@@ -54,6 +54,7 @@ class PersistenceController {
         let userProfile = UserProfile()
         userProfile.name = userData.name ?? ""
         userProfile.userName = userData.userName ?? ""
+        userProfile.profilePicture = userData.profilePicture ?? ""
         userProfile.biography = userData.biography ?? ""
         userProfile.followers = userData.followers ?? 0
         userProfile.followed = userData.followed ?? 0
@@ -123,15 +124,15 @@ class PersistenceController {
 private extension PersistenceController {
     
     func loadObjects() {
-        fetchUserProfile()
-        fetchUserVideos()
+        retrieveUserProfile()
+        retrieveUserVideos()
     }
     
-    func fetchUserProfile() {
+    func retrieveUserProfile() {
         userProfile = Observable(database.objects(UserProfile.self).first)
     }
     
-    func fetchUserVideos() {
-       userVideos = Observable(Array(database.objects(UserVideo.self)))
+    func retrieveUserVideos() {
+        userVideos = Observable(Array(database.objects(UserVideo.self)))
     }
 }

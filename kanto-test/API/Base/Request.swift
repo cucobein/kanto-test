@@ -14,8 +14,4 @@ class Request {
     init(task: URLSessionDataTask) {
         self.task = task
     }
-    
-    func cancel() {
-        task?.cancel()
-    }
 }

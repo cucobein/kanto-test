@@ -8,6 +8,7 @@
 import Foundation
 
 class UserDataResource: ApiResource {
+    
     typealias Model = UserData
     
     let urlRequest: URLRequest

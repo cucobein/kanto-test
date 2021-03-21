@@ -14,4 +14,10 @@ final class KantoProfileRouter: RouterProtocol {
     required init(viewController: UIViewController) {
         self.viewController = viewController
     }
+    
+    func routeToEditProfile(with dataSource: KantoEditProfileViewModelDataSource) {
+        let vc = KantoEditProfileBuilder.build(with: dataSource)
+        vc.modalPresentationStyle = .overFullScreen
+        viewController?.present(vc, animated: true, completion: nil)
+    }
 }

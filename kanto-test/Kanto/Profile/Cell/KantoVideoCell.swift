@@ -30,15 +30,18 @@ final class KantoVideoCell: UITableViewCell {
     private var dataSource: KantoVideoCellDataSource!
     private var userProfileProvider: UserProfileProvider!
     private var videoData: UserVideo!
+    private var playerLayer: AVPlayerLayer?
     private lazy var videoPlayer: AVPlayer? = {
         guard let videoURL = URL(string: videoData.recordVideo) else {
             return nil
         }
         let player = AVPlayer(url: videoURL)
-        let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.videoGravity = .resizeAspectFill
-        playerLayer.frame = self.videoPlayerImageView.bounds
-        self.videoPlayerImageView.layer.addSublayer(playerLayer)
+        playerLayer = AVPlayerLayer(player: player)
+        if let layer = playerLayer {
+            layer.videoGravity = .resizeAspectFill
+            layer.frame = self.videoPlayerImageView.bounds
+            self.videoPlayerImageView.layer.addSublayer(layer)
+        }
         return player
     }()
     
@@ -56,6 +59,7 @@ final class KantoVideoCell: UITableViewCell {
                 self.videoPreviewImageView.isHidden = true
                 self.videoPlayerImageView.isHidden = false
                 self.playButtonImageView.isHidden = true
+                self.playerLayer?.frame = self.videoPlayerImageView.bounds
                 if self.videoPlayer?.timeControlStatus == .playing ||
                     self.videoPlayer?.timeControlStatus == .waitingToPlayAtSpecifiedRate {
                     return
@@ -75,8 +79,15 @@ final class KantoVideoCell: UITableViewCell {
             self.userProfileProvider.toggleUserVideoLikes(with: self.videoData)
             self.updateLikes()
         }
+        
+        loadImages()
+    }
+}
 
-        self.userProfileProvider.getImage(url: videoData.profilePicture) { result in
+private extension KantoVideoCell {
+        
+    func loadImages() {
+        userProfileProvider.getImage(url: videoData.profilePicture) { result in
             switch result {
             case .success(let image):
                 self.userImageView.image = image
@@ -85,16 +96,13 @@ final class KantoVideoCell: UITableViewCell {
             }
         }
         
-        self.userProfileProvider.getImage(url: videoData.previewImg) { result in
+        userProfileProvider.getImage(url: videoData.previewImg) { result in
             switch result {
             case .success(let image): self.videoPreviewImageView.image = image
             case .failure: ()
             }
         }
     }
-}
-
-private extension KantoVideoCell {
     
     func updateLikes() {
         if self.videoData.liked {

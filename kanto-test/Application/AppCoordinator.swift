@@ -11,7 +11,7 @@ class AppCoordinator {
     
     private let apiService = ApiService()
     private let keyValueStorage = KeychainHelper()
-    lazy var persistenceController: PersistenceController = {
+    private lazy var persistenceController: PersistenceController = {
         PersistenceController(keyValueStorage: keyValueStorage)
     }()
     private(set) lazy var context: Context = {
@@ -31,7 +31,6 @@ extension AppCoordinator {
         let launchScreen = KantoLaunchScreenViewController.instantiate(from: .launchScreen)
         window.rootViewController = navigationController
         let dispatchGroup = DispatchGroup()
-        window.rootViewController = navigationController
         dispatchGroup.enter()
         launchScreen.animationFinishedHandler = {
             dispatchGroup.leave()

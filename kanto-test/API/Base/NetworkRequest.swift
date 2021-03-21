@@ -15,51 +15,6 @@ enum NetworkError: Error {
     case connectionError
 }
 
-extension NetworkError: LocalizedError {
-    
-    var errorDescription: String? {
-        switch self {
-        case let .serverError(code, data):
-            if let data = data, let content = String(data: data, encoding: .utf8) {
-                return "Error \(code) - \(content)"
-            } else {
-                return "Error \(code) - Se produjo un error."
-            }
-        case .nilData:
-            return "El contenido de la respuesta está vacio."
-        case .decodeFail(let underlying):
-            return underlying?.localizedDescription ?? "El contenido de la respuesta tiene un formato invalido."
-        case .connectionError:
-            return ""
-        }
-    }
-}
-
-extension NetworkError {
-    
-    var resultMessage: String? {
-        switch self {
-        case .serverError(_, let data):
-            guard let data = data else { return nil }
-            let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: AnyObject]
-            return json?["result_message"] as? String
-        default:
-            return nil
-        }
-    }
-    
-    var resultCode: Int? {
-        switch self {
-        case .serverError(_, let data):
-            guard let data = data else { return nil }
-            let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: AnyObject]
-            return (json?["result_code"] as? Int) ?? code
-        default:
-            return nil
-        }
-    }
-}
-
 class EmptyNetworkResult { }
 
 protocol NetworkRequest {

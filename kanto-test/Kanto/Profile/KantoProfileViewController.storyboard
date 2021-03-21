@@ -42,7 +42,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="iP1-zb-S1B">
-                                        <rect key="frame" x="0.0" y="392" width="375" height="195"/>
+                                        <rect key="frame" x="0.0" y="392" width="375" height="139"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,13 +50,22 @@
                                             <outlet property="delegate" destination="iyK-ft-PTw" id="VNx-4V-H3R"/>
                                         </connections>
                                     </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gtm-8W-ee5" userLabel="Blank space">
+                                        <rect key="frame" x="0.0" y="563" width="375" height="24"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="cQh-QM-uBB"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="5l5-GH-ARS" firstAttribute="leading" secondItem="hUw-hU-qKL" secondAttribute="leading" id="086-JU-yKg"/>
                                     <constraint firstItem="iP1-zb-S1B" firstAttribute="leading" secondItem="hUw-hU-qKL" secondAttribute="leading" id="AJQ-az-fJb"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gtm-8W-ee5" secondAttribute="trailing" id="HfU-p8-OQ2"/>
                                     <constraint firstAttribute="trailing" secondItem="5l5-GH-ARS" secondAttribute="trailing" id="W4E-A1-Dgj"/>
                                     <constraint firstAttribute="trailing" secondItem="iP1-zb-S1B" secondAttribute="trailing" id="m0U-ng-rJ7"/>
+                                    <constraint firstItem="Gtm-8W-ee5" firstAttribute="leading" secondItem="hUw-hU-qKL" secondAttribute="leading" id="oG2-ed-QDK"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bh6-Ot-vHg">
@@ -74,14 +83,14 @@
                                     <constraint firstAttribute="height" constant="80" id="7Dl-A1-PgR"/>
                                 </constraints>
                                 <items>
-                                    <tabBarItem systemItem="favorites" id="MnY-lg-pNQ"/>
-                                    <tabBarItem title="Item" id="ovW-sB-hl4"/>
-                                    <tabBarItem title="Item" id="UQu-gO-vTi"/>
-                                    <tabBarItem title="Item" id="Dth-uS-Vl5"/>
-                                    <tabBarItem systemItem="more" id="8fH-y7-6xB"/>
+                                    <tabBarItem systemItem="contacts" id="MnY-lg-pNQ"/>
+                                    <tabBarItem systemItem="history" id="ovW-sB-hl4"/>
+                                    <tabBarItem systemItem="bookmarks" id="UQu-gO-vTi"/>
+                                    <tabBarItem systemItem="search" id="Dth-uS-Vl5"/>
+                                    <tabBarItem systemItem="downloads" id="8fH-y7-6xB"/>
                                 </items>
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="selectedImageTintColor" name="MajorelleBlue"/>
+                                <color key="selectedImageTintColor" name="TurquoiseSurf"/>
                             </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f4F-8c-kOs"/>
@@ -117,6 +126,9 @@
         </namedColor>
         <namedColor name="Purple">
             <color red="0.55686274509803924" green="0.23529411764705882" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TurquoiseSurf">
+            <color red="0.0" green="0.77254901960784317" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
