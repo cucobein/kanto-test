@@ -23,11 +23,11 @@ class PersistenceController {
     }
     
     private(set) var userProfile = Observable<UserProfile?>(nil)
+    private(set) var userVideos = Observable<[UserVideo]?>(nil)
     
     init(keyValueStorage: KeyValueStorage) {
         self.keyValueStorage = keyValueStorage
         var configuration = Realm.Configuration.defaultConfiguration
-//        configuration.schemaVersion = UInt64(Int(VersionManager.currentVersion()) ?? 1)
         if let databaseEncryptionKey = keyValueStorage.data(forKey: PersistenceController.databaseEncryptionStorageKey) {
             configuration.encryptionKey = databaseEncryptionKey
         } else {
@@ -48,9 +48,90 @@ class PersistenceController {
             }
         }
     }
+    
+    func storeUserProfile(with userData: UserData) {
+        guard userProfile.value == nil else { return }
+        let userProfile = UserProfile()
+        userProfile.name = userData.name ?? ""
+        userProfile.userName = userData.userName ?? ""
+        userProfile.biography = userData.biography ?? ""
+        userProfile.followers = userData.followers ?? 0
+        userProfile.followed = userData.followed ?? 0
+        userProfile.views = userData.views ?? 0
+        do {
+            try database.write {
+                database.add(userProfile)
+            }
+            self.userProfile.value = userProfile
+        } catch {
+            fatalError("Unable to save in database: \(error)")
+        }
+    }
+    
+    func updateUserProfileWith(userProfile: UserProfile) {
+        do {
+            try database.write {  }
+        } catch {
+            fatalError("Unable to save in database: \(error)")
+        }
+    }
+    
+    func storeUserVideos(with dataOfVideos: [VideoData]) {
+        if let vids = userVideos.value, !vids.isEmpty {
+            return
+        }
+        var userVideos = [UserVideo]()
+        for videoData in dataOfVideos {
+            let userVideo = UserVideo()
+            userVideo.name = videoData.user?.name ?? ""
+            userVideo.userName = videoData.user?.userName ?? ""
+            userVideo.profilePicture = videoData.user?.profilePicture ?? ""
+            userVideo.songName = videoData.songName ?? ""
+            userVideo.recordVideo = videoData.recordVideo ?? ""
+            userVideo.previewImg = videoData.previewImg ?? ""
+            userVideo.likes = videoData.likes ?? 0
+            userVideo.liked = false
+            userVideos.append(userVideo)
+        }
+        database.beginWrite()
+        do {
+            userVideos.forEach { database.add($0) }
+            try database.commitWrite()
+            self.userVideos.value = userVideos
+        } catch {
+            fatalError("Unable to save in database: \(error)")
+        }
+    }
+    
+    func toggleUserVideoLikes(with userVideo: UserVideo) {
+        do {
+            try database.write {
+                if userVideo.liked {
+                    userVideo.liked = false
+                    if userVideo.likes > 0 { userVideo.likes -= 1 }
+                } else {
+                    userVideo.liked = true
+                    userVideo.likes += 1
+                }
+            }
+        } catch {
+            fatalError("Unable to save in database: \(error)")
+        }
+    }
 }
 
 private extension PersistenceController {
     
-    func loadObjects() { }
+    func loadObjects() {
+        fetchUserProfile()
+        fetchUserVideos()
+    }
+    
+    func fetchUserProfile() {
+        userProfile = Observable(database.objects(UserProfile.self).first)
+    }
+    
+    func fetchUserVideos() {
+       userVideos = Observable(Array(database.objects(UserVideo.self)))
+    }
 }

@@ -12,7 +12,7 @@ import Bond
 struct KantoVideoCellDataSource: ViewModelDataSourceProtocol {
     
     var context: Context
-    let video: VideoData
+    let video: UserVideo
     var isPlaying = Observable(false)
 }
 
@@ -25,28 +25,18 @@ final class KantoVideoCell: UITableViewCell {
     @IBOutlet private weak var videoPlayerImageView: UIImageView!
     @IBOutlet private weak var playButtonImageView: UIImageView!
     @IBOutlet private weak var likeImageView: UIImageView!
-    @IBOutlet private weak var likeButton: UIButton!
     @IBOutlet private weak var likesLabel: UILabel!
     
-    private var isLike = true {
-        didSet {
-            if isLike {
-                likeImageView.image = UIImage(named: "filledHeart")
-            } else {
-                likeImageView.image = UIImage(named: "emptyHeart")
-            }
-        }
-    }
     private var dataSource: KantoVideoCellDataSource!
-    private var imageProvider: UserProfileProvider!
-    private var videoData: VideoData!
+    private var userProfileProvider: UserProfileProvider!
+    private var videoData: UserVideo!
     private lazy var videoPlayer: AVPlayer? = {
-        guard let url = videoData.recordVideo,
-              let videoURL = URL(string: url) else {
+        guard let videoURL = URL(string: videoData.recordVideo) else {
             return nil
         }
         let player = AVPlayer(url: videoURL)
         let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.videoGravity = .resizeAspectFill
         playerLayer.frame = self.videoPlayerImageView.bounds
         self.videoPlayerImageView.layer.addSublayer(playerLayer)
         return player
@@ -54,12 +44,12 @@ final class KantoVideoCell: UITableViewCell {
     
     func configure(with dataSource: KantoVideoCellDataSource) {
         self.dataSource = dataSource
-        self.imageProvider = dataSource.context.userProfileProvider
+        self.userProfileProvider = dataSource.context.userProfileProvider
         self.videoData = dataSource.video
         
-        userLabel.text = dataSource.video.user?.name
+        userLabel.text = dataSource.video.name
         songLabel.text = dataSource.video.songName
-        likesLabel.text = String(dataSource.video.likes ?? 0)
+        updateLikes()
         
         _ = dataSource.isPlaying.observeNext { isPlaying in
             if isPlaying {
@@ -72,7 +62,7 @@ final class KantoVideoCell: UITableViewCell {
                 }
                 self.videoPlayer?.seek(to: CMTime.zero)
                 self.videoPlayer?.play()
-                print(self.videoData.songName ?? "")
+                print(self.videoData.songName)
             } else {
                 self.videoPreviewImageView.isHidden = false
                 self.videoPlayerImageView.isHidden = true
@@ -80,34 +70,39 @@ final class KantoVideoCell: UITableViewCell {
                 self.videoPlayer?.pause()
             }
         }
-        
-        _ = likeButton.reactive.controlEvents(.touchUpInside).observeNext { [weak self] in
-            guard let self = self else { return }
-            if self.isLike {
-                self.isLike = false
-            } else {
-                self.isLike = true
+
+        _ = likeImageView.reactive.tapGesture().observeNext { [unowned self] _ in
+            self.userProfileProvider.toggleUserVideoLikes(with: self.videoData)
+            self.updateLikes()
+        }
+
+        self.userProfileProvider.getImage(url: videoData.profilePicture) { result in
+            switch result {
+            case .success(let image):
+                self.userImageView.image = image
+                self.userImageView.makeRounded()
+            case .failure: ()
             }
         }
         
-        if let profilePicture = videoData.user?.profilePicture {
-            self.imageProvider.getImage(url: profilePicture) { result in
-                switch result {
-                case .success(let image):
-                    self.userImageView.image = image
-                    self.userImageView.makeRounded()
-                case .failure: ()
-                }
+        self.userProfileProvider.getImage(url: videoData.previewImg) { result in
+            switch result {
+            case .success(let image): self.videoPreviewImageView.image = image
+            case .failure: ()
             }
         }
-        
-        if let previewImg = videoData.previewImg {
-            self.imageProvider.getImage(url: previewImg) { result in
-                switch result {
-                case .success(let image): self.videoPreviewImageView.image = image
-                case .failure: ()
-                }
-            }
+    }
+}
+
+private extension KantoVideoCell {
+    
+    func updateLikes() {
+        if self.videoData.liked {
+            self.likeImageView.image = UIImage(named: "filledHeart")
+        } else {
+            self.likeImageView.image = UIImage(named: "emptyHeart")
         }
+        self.likesLabel.text = String(self.videoData.likes)
+        print("\(self.videoData.songName) - \(self.videoData.likes) likes")
     }
 }

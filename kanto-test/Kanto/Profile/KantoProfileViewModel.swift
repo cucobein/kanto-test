@@ -39,19 +39,23 @@ private extension KantoProfileViewModel {
     func fetchData() {
         userProfileProvider.fetchUserDataProfile { [unowned self] (result) in
             switch result {
-            case .success(let userData):
-                self.userData.value = KantoProfileUserDataSource(context: self.dataSource.context,
-                                                                 userData: userData)
+            case .success(let userProfile):
+                if let userProfile = userProfile {
+                    self.userData.value = KantoProfileUserDataSource(context: self.dataSource.context,
+                                                                     userProfile: userProfile)
+                }
             case .failure: ()
             }
         }
         userProfileProvider.fetchUserVideos { [unowned self] (result) in
             switch result {
             case .success(let userVideos):
-                let videos = userVideos.map({ video -> KantoVideoCellDataSource in
-                    return KantoVideoCellDataSource(context: self.dataSource.context, video: video)
-                })
-                self.videos.replace(with: videos)
+                if let userVideos = userVideos {
+                    let videos = userVideos.map({ video -> KantoVideoCellDataSource in
+                        return KantoVideoCellDataSource(context: self.dataSource.context, video: video)
+                    })
+                    self.videos.replace(with: videos)
+                }
             case .failure: ()
             }
         }

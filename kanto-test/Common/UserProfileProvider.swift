@@ -9,6 +9,7 @@ import UIKit
 import Bond
 
 enum UserProfileProviderError: Error {
+    
     case invalidUserId
 }
 
@@ -25,37 +26,24 @@ class UserProfileProvider {
             self?.userProfile.value = $0
         }
     }
-    
-    var name: String? {
-        guard let profile = userProfile.value else {
-            return nil
-        }
-        return profile.name
-    }
-    
-    var username: String? {
-        guard let profile = userProfile.value else {
-            return nil
-        }
-        return profile.userName
-    }
-    
-    func fetchUserDataProfile(completion: @escaping(Result<UserData, Error>) -> Void) {
+    func fetchUserDataProfile(completion: @escaping(Result<UserProfile?, Error>) -> Void) {
         apiService.getUserData { result in
             switch result {
             case .success(let userData):
-                completion(.success(userData))
+                self.persistenceController.storeUserProfile(with: userData)
+                completion(.success(self.persistenceController.userProfile.value))
             case .failure(let error):
                 completion(.failure(error))
             }
         }
     }
     
-    func fetchUserVideos(completion: @escaping(Result<[VideoData], Error>) -> Void) {
+    func fetchUserVideos(completion: @escaping(Result<[UserVideo]?, Error>) -> Void) {
         apiService.getUserVideos { result in
             switch result {
             case .success(let userVideos):
-                completion(.success(userVideos))
+                self.persistenceController.storeUserVideos(with: userVideos)
+                completion(.success(self.persistenceController.userVideos.value))
             case .failure(let error):
                 completion(.failure(error))
             }
@@ -73,5 +61,13 @@ class UserProfileProvider {
             }
             completion(.success(imageResult))
         }
+    }
+    
+    func updateUserProfileWith(userProfile: UserProfile) {
+        persistenceController.updateUserProfileWith(userProfile: userProfile)
+    }
+    
+    func toggleUserVideoLikes(with userVideo: UserVideo) {
+        persistenceController.toggleUserVideoLikes(with: userVideo)
     }
 }

@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="hUw-hU-qKL">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="587"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5l5-GH-ARS" customClass="RoundedCornersView" customModule="kanto_test" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="360"/>
@@ -41,13 +41,12 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="iP1-zb-S1B">
-                                        <rect key="frame" x="0.0" y="392" width="375" height="275"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="iP1-zb-S1B">
+                                        <rect key="frame" x="0.0" y="392" width="375" height="195"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="dataSource" destination="iyK-ft-PTw" id="4o8-EF-g0N"/>
                                             <outlet property="delegate" destination="iyK-ft-PTw" id="VNx-4V-H3R"/>
                                         </connections>
                                     </tableView>
@@ -94,9 +93,9 @@
                             <constraint firstAttribute="trailing" secondItem="bh6-Ot-vHg" secondAttribute="trailing" constant="24" id="Aub-gx-rUv"/>
                             <constraint firstItem="hUw-hU-qKL" firstAttribute="top" secondItem="f4F-8c-kOs" secondAttribute="top" id="S48-pU-pgd"/>
                             <constraint firstItem="f4F-8c-kOs" firstAttribute="trailing" secondItem="hUw-hU-qKL" secondAttribute="trailing" id="ZrB-c1-q78"/>
+                            <constraint firstItem="TLw-Zo-gtC" firstAttribute="top" secondItem="hUw-hU-qKL" secondAttribute="bottom" id="bvP-ta-2Vh"/>
                             <constraint firstItem="TLw-Zo-gtC" firstAttribute="centerX" secondItem="f4F-8c-kOs" secondAttribute="centerX" id="f95-CX-fVt"/>
                             <constraint firstItem="TLw-Zo-gtC" firstAttribute="leading" secondItem="hUw-hU-qKL" secondAttribute="leading" id="iwJ-0C-4il"/>
-                            <constraint firstItem="f4F-8c-kOs" firstAttribute="bottom" secondItem="hUw-hU-qKL" secondAttribute="bottom" id="lcS-Aw-PNG"/>
                         </constraints>
                     </view>
                     <connections>

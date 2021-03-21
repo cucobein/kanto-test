@@ -10,7 +10,7 @@ import UIKit
 struct KantoProfileUserDataSource: ViewModelDataSourceProtocol {
     
     var context: Context
-    let userData: UserData
+    let userProfile: UserProfile
 }
 
 final class KantoProfileUserDataView: XibView {
@@ -26,29 +26,29 @@ final class KantoProfileUserDataView: XibView {
     
     private var dataSource: KantoProfileUserDataSource!
     private var imageProvider: UserProfileProvider!
-    private var userData: UserData!
+    private var userProfile: UserProfile!
     
     func configure(with dataSource: KantoProfileUserDataSource) {
         self.dataSource = dataSource
         self.imageProvider = dataSource.context.userProfileProvider
-        self.userData = dataSource.userData
+        self.userProfile = dataSource.userProfile
         
-        nameLabel.text = dataSource.userData.name
-        usernameLabel.text = dataSource.userData.userName
-        biographyLabel.text = dataSource.userData.biography
-        followersLabel.text = String(dataSource.userData.followers ?? 0)
-        followedLabel.text = String(dataSource.userData.followed ?? 0)
-        viewsLabel.text = String(dataSource.userData.views ?? 0)
+        nameLabel.text = dataSource.userProfile.name
+        usernameLabel.text = dataSource.userProfile.userName
+        biographyLabel.text = dataSource.userProfile.biography
+        followersLabel.text = String(dataSource.userProfile.followers)
+        followedLabel.text = String(dataSource.userProfile.followed)
+        viewsLabel.text = String(dataSource.userProfile.views)
         
-        if let profilePicture = userData.profilePicture {
-            self.imageProvider.getImage(url: profilePicture) { result in
-                switch result {
-                case .success(let image):
-                    self.profilePictureImageView.image = image
-                    self.profilePictureImageView.makeRounded()
-                case .failure: ()
-                }
+        self.imageProvider.getImage(url: userProfile.profilePicture) { result in
+            switch result {
+            case .success(let image):
+                self.profilePictureImageView.image = image
+                self.profilePictureImageView.makeRounded()
+            case .failure: ()
             }
         }
+        
+        editProfileButton.makeRounded(cornerRadius: 8)
     }
 }

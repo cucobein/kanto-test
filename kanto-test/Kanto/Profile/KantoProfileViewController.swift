@@ -51,7 +51,10 @@ private extension KantoProfileViewController {
                 self.userDataView?.configure(with: data) : self.addUserDataPanel()
         }
         
-        viewModel.videos.bind(to: tableView, cellType: KantoVideoCell.self) { $0.configure(with: $1) }
+        viewModel.videos.bind(to: tableView, cellType: KantoVideoCell.self) {
+            $0.backgroundColor = .clear
+            $0.configure(with: $1)
+        }
     }
     
     func addUserDataPanel() {
