@@ -160,6 +160,10 @@ extension KantoEditProfileViewController: UIImagePickerControllerDelegate {
     public func imagePickerController(_ picker: UIImagePickerController,
                                       didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         viewModel.imageData.value = (info[.editedImage] as? UIImage)?.jpegData(compressionQuality: 0.5)
+        if let dataImg = viewModel.imageData.value,
+           let img = UIImage(data: dataImg) {
+            profileImageView.image = img
+        }
         picker.dismiss(animated: true, completion: nil)
     }
 }
